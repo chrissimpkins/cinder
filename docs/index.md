@@ -176,6 +176,13 @@ pages:
 
 The link appears at the upper right hand corner of your site.
 
+### Toggle The Search Link
+
+A search link is show in the header by default. Toggle the search link on and off by including 'include_search' in the 'mkdocs.yml' file
+
+<pre><code class="yaml">extra:
+    include_search: false</code></pre>
+
 ### License Declaration and Link
 
 The Cinder theme displays your license declaration in the footer if you include a `copyright` field and define it with the text (and optionally the HTML link) that you would like to display:
