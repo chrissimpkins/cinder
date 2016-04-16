@@ -1,9 +1,9 @@
-site_name: Cinder
-theme_dir: cinder
-site_author: Christopher Simpkins
-site_description: "A clean, responsive theme for static documentation websites that are generated with MkDocs"
-repo_url: "https://github.com/chrissimpkins/cinder"
-copyright: "Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a>"
+site_name: Psinder
+theme_dir: psinder
+site_author: Michael T Lombardi
+site_description: "A clean, responsive PowerShell-inspired theme for static documentation websites that are generated with MkDocs - forked with love from Chris Simpkins' Cinder"
+repo_url: "https://github.com/michaeltlombardi/mkdocs-psinder"
+copyright: "Psinder is licensed under the <a href='https://github.com/michaeltlombardi/mkdocs-psinder/blob/master/LICENSE.md'>MIT license</a>"
 pages:
   - Home: index.md
   - Specimen: specimen.md

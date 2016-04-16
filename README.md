@@ -1,8 +1,8 @@
 <a href="http://sourcefoundry.org/cinder/"><img src="img/header.png" alt="Cinder | A clean, responsive theme for MkDocs" width="728"></a>
 
-## Cinder
+## PSinder
 
-A clean, responsive MkDocs static documentation site generator theme
+A clean, responsive MkDocs static documentation site generator theme -forked with love from [Cinder](https://github.com/chrissimpkins/cinder) by [Chris Simpkins](https://twitter.com/csimpkins)
 
-[Demo and Documentation](http://sourcefoundry.org/cinder/)
+[Demo and Documentation](michaeltlombardi.github.io/mkdocs-psinder)
 

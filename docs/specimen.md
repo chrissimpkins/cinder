@@ -81,24 +81,18 @@ This is an example of inline code `#import requests`
 
 <h3>Preformatted Code Blocks <small>with Syntax Highlighting</small></h3>
 
-<pre><code class="python">def convert_markdown(markdown_source, config, site_navigation=None):
-    """
-    Convert the Markdown source file to HTML as per the config and
-    site_navigation. Return a tuple of the HTML as a string, the parsed table
-    of contents, and a dictionary of any metadata that was specified in the
-    Markdown file.
-    """
-
-    extensions = [
-        RelativePathExtension(site_navigation, config['strict'])
-    ] + config['markdown_extensions']
-
-    return utils.convert_markdown(
-        markdown_source=markdown_source,
-        extensions=extensions,
-        extension_configs=config['mdx_configs']
-    )
-</code></pre>
+```powershell
+# This is a PowerShell comment.
+function MyFunction([Parameter(Position = 0)][system.string]$Path)
+{
+    :looplabel foreach ($ThisFile in (Get-ChildItem -Path $Path)
+    {
+        Write-Host ; Write-Host -Fore Yellow `
+            ('Length:' +
+            [System.Math]::Floor($ThisFile.Length / 1000))
+    }
+}
+```
 
 
 ## Tables

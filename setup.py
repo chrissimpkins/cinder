@@ -1,21 +1,21 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.9.4'
+VERSION = '0.1.0'
 
 
 setup(
-    name="mkdocs-cinder",
+    name="mkdocs-psinder",
     version=VERSION,
-    url='https://github.com/chrissimpkins/cinder',
+    url='https://github.com/michaeltlombardi/psinder',
     license='MIT',
-    description='A clean responsive theme for the MkDocs static documentation site generator',
-    author='Christopher Simpkins',
-    author_email='chris@sourcefoundry.org',
+    description='A clean, responsive PowerShell-inspired theme for static documentation websites that are generated with MkDocs - forked with love from Chris Simpkins Cinder',
+    author='Michael T Lombardi',
+    author_email='michael.t.lombardi@outlook.com',
     packages=find_packages(),
     include_package_data=True,
     entry_points={
         'mkdocs.themes': [
-            'cinder = cinder',
+            'psinder = psinder',
         ]
     },
     zip_safe=False
