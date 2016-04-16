@@ -1,4 +1,5 @@
 # Colors
+This is a list of colors for reference.
 
 ## Menu
 * Background: #386CB8
