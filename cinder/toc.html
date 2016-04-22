@@ -1,13 +1,52 @@
+{# Figure out how deep we go down the rabbit hole #}
+{% if 'toc_depth' in meta %}
+  {% set depth = meta.toc_depth|first|int %}
+{% elif 'toc_depth' in config.extra %}
+  {% set depth = config.extra.toc_depth %}
+{% else %}
+  {% set depth = 3 %}
+{% endif %}
 <div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     {% for toc_item in toc %}
-        <li class="first-level {% if toc_item.active %}active{% endif %}"><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
-        {% for toc_item in toc_item.children %}
-            <li class="second-level"><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
-            {% for toc_item in toc_item.children %}
-                <li class="third-level"><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+        <li class="{% if toc_item.active %}active{% endif %}">
+            <a href="{{ toc_item.url }}">{{ toc_item.title }}</a>
+            {% if depth >= 2 and toc_item.children|length > 0 %}<ul class="nav">
+                {% for toc_item in toc_item.children %}
+                    <li class="second-level">
+                        <a href="{{ toc_item.url }}">{{ toc_item.title }}</a>
+                        {% if depth >= 3 and toc_item.children|length > 0 %}<ul class="nav">
+                        {% for toc_item in toc_item.children %}
+                            <li class="third-level">
+                                <a href="{{ toc_item.url }}">{{ toc_item.title }}</a>
+                                {% if depth >= 4 and toc_item.children|length > 0 %}<ul class="nav">
+                                {% for toc_item in toc_item.children %}
+                                    <li class="fourth-level">
+                                        <a href="{{ toc_item.url }}">{{ toc_item.title }}</a>
+                                        {% if depth >= 5 and toc_item.children|length > 0 %}<ul class="nav">
+                                        {% for toc_item in toc_item.children %}
+                                            <li class="fifth-level">
+                                                <a href="{{ toc_item.url }}">{{ toc_item.title }}</a>
+                                                {% if depth >= 6 and toc_item.children|length > 0 %}<ul class="nav">
+                                                {% for toc_item in toc_item.children %}
+                                                    <li class="sixth-level">
+                                                        <a href="{{ toc_item.url }}">{{ toc_item.title }}</a>
+                                                    </li>
+                                                {% endfor %}
+                                                </ul>{% endif %}
+                                            </li>
+                                        {% endfor %}
+                                        </ul>{% endif %}
+                                    </li>
+                                {% endfor %}
+                                </ul>{% endif %}
+                            </li>
+                        {% endfor %}
+                        </ul>{% endif %}
+                    </li>
             {% endfor %}
-        {% endfor %}
+            </ul>{% endif %}
+        </li>
     {% endfor %}
     </ul>
 </div>
