@@ -58,6 +58,25 @@
     ga('send', 'pageview');
     </script>
     {% endif %}
+
+    {# Figure out if we should collapse the ToC on this page or not #}
+    {% if 'collapse_toc' in meta %}
+      {% if meta.collapse_toc|first == 'true' %}
+        {% set collapse_toc = True %}
+      {% else %}
+        {% set collapse_toc = False %}
+      {% endif %}
+    {% elif 'collapse_toc' in config.extra %}
+      {% set collapse_toc = config.extra.collapse_toc %}
+    {% endif %}
+    {% if collapse_toc %}
+    <style>
+        /* Collapse ToC */
+        .bs-sidebar .nav .nav {
+            display: none;
+        }
+    </style>
+    {% endif %}
 </head>
 
 <body{% if current_page and current_page.is_homepage %} class="homepage" {% endif %} data-spy="scroll" data-target=".bs-sidebar">
