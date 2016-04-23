@@ -5,6 +5,9 @@ site_description: "A clean, responsive PowerShell-inspired theme for static docu
 repo_url: "https://github.com/michaeltlombardi/mkdocs-psinder"
 copyright: "Psinder is licensed under the <a href='https://github.com/michaeltlombardi/mkdocs-psinder/blob/master/LICENSE.md'>MIT license</a>"
 pages:
-  - Home: index.md
-  - Specimen: specimen.md
-
+    - Home: index.md
+    - Specimen: specimen.md
+    - Configuration: configuration.md
+extra:
+    version: 0.2.1
+    repo_branch: dev
