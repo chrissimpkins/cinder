@@ -74,7 +74,11 @@
     <footer class="col-md-12 text-center">
         <hr>
         {% if current_page %}
-        <p><a href="{{ repo_url }}{{ repo_doc_path }}/tree/master/docs/{{ current_page.input_path }}" class="icon icon-github"> Edit this page on GitHub</a></p>
+            {% if config.extra.repo_branch %}
+            <p><a href="{{ repo_url }}{{ repo_doc_path }}/tree/{{ config.extra.repo_branch }}/docs/{{ current_page.input_path }}" class="icon icon-github"> Edit this page on GitHub</a></p>
+            {% else %}
+            <p><a href="{{ repo_url }}{{ repo_doc_path }}/tree/master/docs/{{ current_page.input_path }}" class="icon icon-github"> Edit this page on GitHub</a></p>
+            {% endif %}
         {% endif %}
         <p>{% if copyright %}
         <small>{{ copyright }}<br></small>
