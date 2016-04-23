@@ -3157,20 +3157,20 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
     border-color: #222;
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
-    color: #fff;
-    background-color: #272727;
+    color: #000;
+    background-color: #C75050;
 }
 @media(max-width:767px) {
     .navbar-default .navbar-nav .open .dropdown-menu>li>a {
     color: #fff;
 }
 .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
-    color: #fff;
-    background-color: #272727;
+    color: #000;
+    background-color: #C75050;
 }
 .navbar-default .navbar-nav .open .dropdown-menu>.active>a, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus {
-    color: #fff;
-    background-color: #272727;
+    color: #000;
+    background-color: #C75050;
 }
 .navbar-default .navbar-nav .open .dropdown-menu>.disabled>a, .navbar-default .navbar-nav .open .dropdown-menu>.disabled>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>.disabled>a:focus {
     color: #ccc;
@@ -4963,13 +4963,14 @@ th.visible-print, td.visible-print {
     color: rgba(255, 255, 255, 0.5);
 }
 .navbar-default .dropdown-menu {
-    background-color: #333;
+    background-color: #f5f5f5;
 }
 .navbar-default .dropdown-menu>li>a, .navbar-default .dropdown-menu>li>a:focus {
-    color: #fff;
+    color: #000;
 }
 .navbar-default .dropdown-menu>li>a:hover, .navbar-default .dropdown-menu>.active>a, .navbar-default .dropdown-menu>.active>a:hover {
-    background-color: #272727;
+    background-color: #C75050;
+    font-weight: bold;
 }
 .navbar-inverse .dropdown-menu {
     background-color: #008cba;

@@ -50,3 +50,4 @@ psinder/js/base.js
 psinder/js/bootstrap-3.0.3.min.js
 psinder/js/highlight.pack.js
 psinder/js/jquery-1.10.2.min.js
+site/__init__.py

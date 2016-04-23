@@ -1,12 +1,12 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.1.0'
+VERSION = '0.2.0'
 
 
 setup(
     name="mkdocs-psinder",
     version=VERSION,
-    url='https://github.com/michaeltlombardi/psinder',
+    url='https://github.com/michaeltlombardi/mkdocs-psinder',
     license='MIT',
     description='A clean, responsive PowerShell-inspired theme for static documentation websites that are generated with MkDocs - forked with love from Chris Simpkins Cinder',
     author='Michael T Lombardi',

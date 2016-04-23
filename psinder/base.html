@@ -73,6 +73,9 @@
 
     <footer class="col-md-12 text-center">
         <hr>
+        {% if current_page %}
+        <p><a href="{{ repo_url }}{{ repo_doc_path }}/tree/master/docs/{{ current_page.input_path }}" class="icon icon-github"> Edit this page on GitHub</a></p>
+        {% endif %}
         <p>{% if copyright %}
         <small>{{ copyright }}<br></small>
         {% endif %}
