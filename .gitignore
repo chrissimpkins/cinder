@@ -1,4 +1,4 @@
 site
 build
 dist
-mkdocs_cinder.egg-info/
+mkdocs_psinder.egg-info

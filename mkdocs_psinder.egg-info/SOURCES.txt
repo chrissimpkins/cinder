@@ -20,6 +20,7 @@ psinder/css/bootstrap-custom.css
 psinder/css/bootstrap-custom.min.css
 psinder/css/font-awesome-4.0.3.css
 psinder/css/highlight.css
+psinder/css/highlight.nowrap.css
 psinder/css/psinder.css
 psinder/fonts/fontawesome-webfont.eot
 psinder/fonts/fontawesome-webfont.svg

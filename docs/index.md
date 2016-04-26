@@ -57,7 +57,7 @@ pages:
 
 Download the Psinder theme archive.
 
-<a href="https://github.com/michaeltlombardi/mkdocs-psinder/releases/download/Latest/mkdocs-psinder-0.1.0.zip"><button type="button" class="btn btn-success"><i class="fa fa-cloud-download"></i>  Download Psinder v0.1.0</button></a>
+<a href="https://github.com/michaeltlombardi/mkdocs-psinder/releases/download/Latest/mkdocs-psinder-0.3.0.zip"><button type="button" class="btn btn-success"><i class="fa fa-cloud-download"></i>  Download Psinder v0.3.0</button></a>
 
 Unpack the contents of the archive into a directory named `psinder` at the top level of your MkDocs project directory.
 

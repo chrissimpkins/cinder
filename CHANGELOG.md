@@ -1,5 +1,8 @@
 ## Changelog
 
+### v0.3.0
+Added the option to turn off line-wrap in code blockss and example of this option to the configuration page.
+
 ### v0.2.1
 Fixed "Edit on Github" functionality; if no repo_branch is specified in the configuration, it will default to the master branch. Otherwise, it will resolve to the specified branch.
 

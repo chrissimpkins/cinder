@@ -9,5 +9,6 @@ pages:
     - Specimen: specimen.md
     - Configuration: configuration.md
 extra:
-    version: 0.2.1
+    version: 0.3.0
     repo_branch: dev
+use_directory_urls: false
