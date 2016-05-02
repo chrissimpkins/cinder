@@ -1,5 +1,5 @@
 body {
-    padding-top: 70px;
+    padding-top: 40px;
 }
 
 h1[id]:before, h2[id]:before, h3[id]:before, h4[id]:before, h5[id]:before, h6[id]:before {
@@ -19,6 +19,8 @@ ul.nav li.third-level {
 
 div.col-md-3 {
     padding-left: 0;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 div.col-md-9 {
@@ -27,6 +29,12 @@ div.col-md-9 {
 
 div.source-links {
     float: right;
+}
+
+div.tags {
+    margin-top: 10px;
+    text-align: center;
+    position: static;
 }
 
 /*
@@ -47,7 +55,7 @@ div.source-links {
 
 /* First level of nav */
 .bs-sidenav {
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 30px;
     padding-top:    10px;
     padding-bottom: 10px;
@@ -61,6 +69,7 @@ div.source-links {
     padding: 5px 20px;
     z-index: 1;
 }
+
 .bs-sidebar .nav > li > a:hover,
 .bs-sidebar .nav > li > a:focus {
     text-decoration: none;
@@ -98,9 +107,14 @@ div.source-links {
     .bs-sidebar.affix-bottom {
         width: 213px;
     }
+    div.tags {
+        position: fixed;
+        text-align: center;
+        width: 213px;
+        margin-bottom: 5px;
+    }
     .bs-sidebar.affix {
         position: fixed; /* Undo the static from mobile first approach */
-        top: 80px;
     }
     .bs-sidebar.affix-bottom {
         position: absolute; /* Undo the static from mobile first approach */
@@ -114,7 +128,8 @@ div.source-links {
 @media (min-width: 1200px) {
     /* Widen the fixed sidebar again */
     .bs-sidebar.affix-bottom,
-    .bs-sidebar.affix {
+    .bs-sidebar.affix,
+    div.tags {
         width: 263px;
     }
 }
