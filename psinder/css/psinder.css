@@ -301,3 +301,44 @@ footer > hr {
     color: darkcyan;
     background-color: #fff;
 }
+
+.label-primary {
+    background-color: #386CB8;
+}
+.label-primary[href]:hover, .label-primary[href]:focus {
+    background-color: #386CB8;
+    color: #000;
+    font-weight: bold;
+}
+.label-success {
+    background-color: limegreen;
+}
+.label-success[href]:hover, .label-success[href]:focus {
+    background-color: limegreen;
+    color: #000;
+    font-weight: bold;
+}
+.label-info {
+    background-color: darkcyan;
+}
+.label-info[href]:hover, .label-info[href]:focus {
+    background-color: darkcyan;
+    color: #000;
+    font-weight: bold;
+}
+.label-warning {
+    background-color: #ffa500;
+}
+.label-warning[href]:hover, .label-warning[href]:focus {
+    background-color: #ffa500;
+    color: #000;
+    font-weight: bold;
+}
+.label-danger {
+    background-color: #FF0000;
+}
+.label-danger[href]:hover, .label-danger[href]:focus {
+    background-color: #FF0000;
+    color: #000;
+    font-weight: bold;
+}
