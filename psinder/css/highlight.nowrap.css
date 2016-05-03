@@ -1,0 +1,8 @@
+pre {
+    word-break: keep-all;
+    word-wrap: normal;
+}
+pre code {
+    white-space: pre;
+    overflow: auto;
+}

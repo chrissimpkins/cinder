@@ -1,25 +1,19 @@
 ## Changelog
 
-### v0.9.4
+### v0.4.0
+Added the option to integrate Disqus comments into the site.
+Comments must be explicitly enabled for each page but sitewide configuration is done in the mkdocs.yml.
 
-- added support for H3 header titles in sidebar menu (PR #9)
+### v0.3.0
+Added the option to turn off line-wrap in code blockss and example of this option to the configuration page.
 
-### v0.9.3
+### v0.2.1
+Fixed "Edit on Github" functionality; if no repo_branch is specified in the configuration, it will default to the master branch. Otherwise, it will resolve to the specified branch.
 
-- Added support for > 2 level dropdown link depth (Issue #1 with PR #3)
-- Updated Hack web fonts to v2.018
+### v0.2.0
+Fixed color of dropdown menu (replacing Cinder's dark theme with a consistent look).
+Added "Edit this page on Github" link to the footer of the pages.
+Removed Cinder logo from readme.
 
-### v0.9.2
-
-- Updated Hack web fonts to v2.015.
-
-
-### v0.9.1
-
-- modified the width of the footer horizontal line to avoid overlap with long TOC in the left sidebar
-- minified the Bootstrap CSS
-- modified the formatting of license declaration displays in the footer
-
-### v0.9.0
-
-- Initial release
+### v0.1.0
+Initial release.

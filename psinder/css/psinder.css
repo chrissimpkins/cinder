@@ -1,0 +1,344 @@
+/*
+  Cinder Theme for MkDocs | Copyright 2015 Christopher Simpkins | MIT License
+*/
+
+body {
+    font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: #012456;
+    color: #f5f5f5;
+}
+a {
+    color: yellow;
+    text-decoration: none
+}
+
+a:hover,
+a:active {
+    color: green;
+    font-weight: 600;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family:'Lucida Console', 'Consolas', monaco, monospace;
+    color: #f5f5f5;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
+    color: #B1B7B9;
+}
+h1, h2 {
+    font-weight: 700;
+}
+h4 {
+    ffont-family:'Lucida Console', 'Consolas', monaco, monospace;
+    font-weight: 300;
+    margin-top: 20px;
+    font-style: italic;
+}
+h5 {
+    font-family:'Lucida Console', 'Consolas', monaco, monospace;
+    font-weight: 300;
+    font-variant: small-caps;
+}
+pre, code {
+    font-family: 'Lucida Console', 'Consolas', monaco, monospace;
+    background-color: #f5f5f5;
+    color: #000;
+}
+pre>code {
+    font-size: 12px;
+}
+pre {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.lead {
+    font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.0312em;
+    color: #B1B7B9;
+}
+.navbar-default {
+    background-color: #386CB8;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #000;
+    background-color: #C75050;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: #000;
+    font-weight: bold;
+    background-color: #C75050;
+}
+.bs-sidenav {
+    background-color: #386CB8;
+    font-size: 12px;
+}
+.well {
+    background-color: #386CB8;
+    border: none;
+}
+blockquote {
+    color: #00FFFF;
+    border-left-width: 3px;
+}
+blockquote.pull-right {
+    border-right-width: 3px;
+}
+.btn-default {
+    background-color:#FCFDFF;
+}
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #FCFDFF;
+}
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 21px;
+    line-height: 1.428571429;
+    background-color: #012456;
+    border: 1px solid #012456;
+    border-radius: 0;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+#mkdocs-search-query:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+#mkdocs-search-query {
+    font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #343838;
+    height: 45px;
+}
+#mkdocs-search-results h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+#mkdocs-search-results {
+    font-size: 14px;
+}
+footer > hr {
+    width: 35%;
+}
+
+.modal-content {
+    background-color: #012456;
+    border: 1px solid #012456;
+}
+
+.modal-header {
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.text-primary {
+    color: #f5f5f5;
+    font-weight: 600;
+}
+.text-primary:hover {
+    color: #ffffff;
+    font-weight: 600;
+}
+.text-warning {
+    color: #ffa500;
+    font-weight: 600;
+}
+.text-warning:hover {
+    color: #ffa500;
+    font-weight: 600;
+}
+.text-danger {
+    color: #FF0000;
+    font-weight: 600;
+}
+.text-danger:hover {
+    color: #FF0000;
+    font-weight: 600;
+}
+.text-success {
+    color: #00FF00;
+    font-weight: 600;
+}
+.text-success:hover {
+    color: #00FF00;
+    font-weight: 600;
+}
+.text-info {
+    color: #00FFFF;
+    font-weight: 600;
+}
+.text-info:hover {
+    color: #00FFFF;
+    font-weight: 600;
+}
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid darkgray;
+}
+.table-striped>tbody>tr:nth-child(even)>td, .table-striped>tbody>tr:nth-child(even)>th {
+    background-color: #386CB8;
+    color: #000;
+}
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+    color: #000;
+}
+.table-striped th, .table-bordered th {
+    background-color: #386CB8;
+}
+.table-bordered {
+    border: 1px solid darkgray;
+}
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+    border: 1px solid darkgray;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #386CB8;
+    border-color: #386CB8;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    color: #000;
+    background-color: #C75050;
+    border-color: #C75050;
+}
+.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
+    background-color: #008cba;
+    border-color: #0079a1;
+}
+.btn-primary .badge {
+    color: #008cba;
+    background-color: #fff;
+}
+.btn-warning {
+    color: #fff;
+    background-color: #ffa500;
+    border-color: #ffa500;
+}
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open .dropdown-toggle.btn-warning {
+    color: #000;
+    background-color: #ffa500;
+    border-color: #ffa500;
+}
+.btn-warning:active, .btn-warning.active, .open .dropdown-toggle.btn-warning {
+    background-image: none;
+}
+.btn-warning.disabled, .btn-warning[disabled], fieldset[disabled] .btn-warning, .btn-warning.disabled:hover, .btn-warning[disabled]:hover, fieldset[disabled] .btn-warning:hover, .btn-warning.disabled:focus, .btn-warning[disabled]:focus, fieldset[disabled] .btn-warning:focus, .btn-warning.disabled:active, .btn-warning[disabled]:active, fieldset[disabled] .btn-warning:active, .btn-warning.disabled.active, .btn-warning[disabled].active, fieldset[disabled] .btn-warning.active {
+    color: darkgray;
+    background-color: #ffa500;
+    border-color: #ffa500;
+}
+.btn-warning .badge {
+    color: #ffa500;
+    background-color: #fff;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #FF0000;
+    border-color: #FF0000;
+}
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open .dropdown-toggle.btn-danger {
+    color: #000;
+    background-color: #FF0000;
+    border-color: #FF0000;
+}
+.btn-danger:active, .btn-danger.active, .open .dropdown-toggle.btn-danger {
+    background-image: none;
+}
+.btn-danger.disabled, .btn-danger[disabled], fieldset[disabled] .btn-danger, .btn-danger.disabled:hover, .btn-danger[disabled]:hover, fieldset[disabled] .btn-danger:hover, .btn-danger.disabled:focus, .btn-danger[disabled]:focus, fieldset[disabled] .btn-danger:focus, .btn-danger.disabled:active, .btn-danger[disabled]:active, fieldset[disabled] .btn-danger:active, .btn-danger.disabled.active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger.active {
+    color: darkgray;
+    background-color: #FF0000;
+    border-color: #FF0000;
+}
+.btn-danger .badge {
+    color: #FF0000;
+    background-color: #fff;
+}
+.btn-success {
+    color: #fff;
+    background-color: limegreen;
+    border-color: limegreen;
+}
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
+    color: #000;
+    background-color: limegreen;
+    border-color: limegreen;
+}
+.btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
+    background-image: none;
+}
+.btn-success.disabled, .btn-success[disabled], fieldset[disabled] .btn-success, .btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover, .btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus, .btn-success.disabled:active, .btn-success[disabled]:active, fieldset[disabled] .btn-success:active, .btn-success.disabled.active, .btn-success[disabled].active, fieldset[disabled] .btn-success.active {
+    background-color: limegreen;
+    border-color: limegreen;
+}
+.btn-success .badge {
+    color: limegreen;
+    background-color: #fff;
+}
+.btn-info {
+    color: #fff;
+    background-color: darkcyan;
+    border-color: darkcyan;
+}
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info {
+    color: #000;
+    background-color: darkcyan;
+    border-color: darkcyan;
+}
+.btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info {
+    background-image: none;
+}
+.btn-info.disabled, .btn-info[disabled], fieldset[disabled] .btn-info, .btn-info.disabled:hover, .btn-info[disabled]:hover, fieldset[disabled] .btn-info:hover, .btn-info.disabled:focus, .btn-info[disabled]:focus, fieldset[disabled] .btn-info:focus, .btn-info.disabled:active, .btn-info[disabled]:active, fieldset[disabled] .btn-info:active, .btn-info.disabled.active, .btn-info[disabled].active, fieldset[disabled] .btn-info.active {
+    background-color: darkcyan;
+    border-color: darkcyan;
+}
+.btn-info .badge {
+    color: darkcyan;
+    background-color: #fff;
+}
+
+.label-primary {
+    background-color: #386CB8;
+}
+.label-primary[href]:hover, .label-primary[href]:focus {
+    background-color: #386CB8;
+    color: #000;
+    font-weight: bold;
+}
+.label-success {
+    background-color: limegreen;
+}
+.label-success[href]:hover, .label-success[href]:focus {
+    background-color: limegreen;
+    color: #000;
+    font-weight: bold;
+}
+.label-info {
+    background-color: darkcyan;
+}
+.label-info[href]:hover, .label-info[href]:focus {
+    background-color: darkcyan;
+    color: #000;
+    font-weight: bold;
+}
+.label-warning {
+    background-color: #ffa500;
+}
+.label-warning[href]:hover, .label-warning[href]:focus {
+    background-color: #ffa500;
+    color: #000;
+    font-weight: bold;
+}
+.label-danger {
+    background-color: #FF0000;
+}
+.label-danger[href]:hover, .label-danger[href]:focus {
+    background-color: #FF0000;
+    color: #000;
+    font-weight: bold;
+}
