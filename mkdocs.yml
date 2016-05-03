@@ -1,4 +1,6 @@
 site_name: Psinder
+site_url: https://michaeltlombardi.github.io/mkdocs-psinder
+site_favicon: static/favicon.ico
 theme_dir: psinder
 site_author: Michael T Lombardi
 site_description: "A clean, responsive PowerShell-inspired theme for static documentation websites that are generated with MkDocs - forked with love from Chris Simpkins' Cinder"
@@ -9,6 +11,7 @@ pages:
     - Specimen: specimen.md
     - Configuration: configuration.md
 extra:
-    version: 0.3.0
+    version: 0.4.0
     repo_branch: dev
+    disqus: psinder
 use_directory_urls: false

@@ -1,6 +1,7 @@
 ---
-Tags: meta
-      configuration
+Tags:     meta
+          configuration
+Comments: true
 ---
 # Configuration
 
@@ -34,6 +35,29 @@ See this page's [source]() for another example.
 ---
 Tags: tutorial
       easy
+---
+# Page Title
+Page content goes here...
+```
+
+## Disqus Integration
+You can also add a [Disqus]() comment section to individual pages of your site.
+You'll need to have already [registered](https://disqus.com/admin/create/) a Disqus site.
+If you want to enable a Disqus integration, in the `extra` setion of your mkdocs.yml specify `disqus: <your Disqus site name>` - make sure to replace <your Disqus site name> with the name proceeding `.disqus.com`.
+
+You'll also have to specify `Comments: True` in the metadata for pages you want comments on.
+As with adding Tags to the metadata for a page, the metadata *must* be the first component of the document.
+
+### Example: Disqus Integration
+```yaml
+extra:
+    disqus: psinder
+```
+
+### Example: Enable Comments 
+```markdown
+---
+Comments: True
 ---
 # Page Title
 Page content goes here...
