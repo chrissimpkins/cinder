@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: mkdocs-psinder
-Version: 0.3.0
+Version: 0.4.0
 Summary: A clean, responsive PowerShell-inspired theme for static documentation websites that are generated with MkDocs - forked with love from Chris Simpkins Cinder
 Home-page: https://github.com/michaeltlombardi/mkdocs-psinder
 Author: Michael T Lombardi
