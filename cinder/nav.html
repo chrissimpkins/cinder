@@ -14,7 +14,10 @@
             {% endif %}
 
             <!-- Main title -->
-            <a class="navbar-brand" href="{{ homepage_url }}">{{ site_name }}</a>
+            <a class="navbar-brand" href="{{ homepage_url }}">
+                {{ site_name }} 
+                <small class="small small-brand-text">{{ config.extra.service_version }}</small>
+            </a>
         </div>
 
         <!-- Expanded navigation -->
