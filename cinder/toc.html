@@ -1,6 +1,6 @@
 {# Figure out how deep we go down the rabbit hole #}
-{% if 'toc_depth' in meta %}
-  {% set depth = meta.toc_depth|first|int %}
+{% if 'toc_depth' in page.meta %}
+  {% set depth = page.meta.toc_depth|first|int %}
 {% elif 'toc_depth' in config.extra %}
   {% set depth = config.extra.toc_depth %}
 {% else %}

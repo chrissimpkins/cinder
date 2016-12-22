@@ -60,8 +60,8 @@
     {% endif %}
 
     {# Figure out if we should collapse the ToC on this page or not #}
-    {% if 'collapse_toc' in meta %}
-      {% if meta.collapse_toc|first == 'true' %}
+    {% if 'collapse_toc' in page.meta %}
+      {% if page.meta.collapse_toc|first == 'true' %}
         {% set collapse_toc = True %}
       {% else %}
         {% set collapse_toc = False %}
