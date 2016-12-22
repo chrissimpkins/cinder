@@ -8,7 +8,7 @@
 {% endif %}
 <div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-    {% for toc_item in toc %}
+    {% for toc_item in page.toc %}
         <li class="{% if toc_item.active %}active{% endif %}">
             <a href="{{ toc_item.url }}">{{ toc_item.title }}</a>
             {% if depth >= 2 and toc_item.children|length > 0 %}<ul class="nav">
