@@ -1,8 +1,8 @@
-site_name: Development Guide - dRonin
+site_name: Cinder
 theme_dir: cinder
-site_author: dRonin
-site_description: "dRonin wiki pages organized using mkdocs with cinder theme"
-repo_url: "https://github.com/rxdu/dRonin-docs"
+site_author: Christopher Simpkins
+site_description: "A clean, responsive theme for static documentation websites that are generated with MkDocs"
+repo_url: "https://github.com/chrissimpkins/cinder"
 copyright: "Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a>"
 pages:
   - Home: index.md
