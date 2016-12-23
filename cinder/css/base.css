@@ -181,5 +181,5 @@ div.source-links {
 
 /* Make images auto-resize to fit column */
 img {
-    width: 100%
+    max-width: 100%
 }
