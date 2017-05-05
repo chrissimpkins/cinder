@@ -4,14 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A clean, responsive theme for static documentation websites that are generated with MkDocs"> 
     <meta name="author" content="Christopher Simpkins">  
     <link rel="shortcut icon" href="../img/favicon.ico">
 
     <title>Specimen - Cinder</title>
 
     <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
     <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
@@ -35,9 +36,13 @@
     </script>
 
     
+
+    
+    
+    
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".bs-sidebar">
 
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -55,7 +60,7 @@
             
 
             <!-- Main title -->
-            <a class="navbar-brand" href="..">Cinder</a>
+            <a class="navbar-brand" href="..">Cinder<small class="small small-brand-text"></small></a>
         </div>
 
         <!-- Expanded navigation -->
@@ -80,11 +85,7 @@
             
 
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                        <i class="fa fa-search"></i> Search
-                    </a>
-                </li>
+                
                 
                     <li >
                         <a rel="next" href="..">
@@ -114,65 +115,115 @@
 
     <div class="container">
         
-        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+        <div class="col-md-3">
+
+  
+
+<div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#typography">Typography</a></li>
-        
-            <li class="second-level"><a href="#typefaces">Typefaces</a></li>
+        <li class="active">
+            <a href="#typography">Typography</a>
+            <ul class="nav">
+                
+                    <li class="second-level">
+                        <a href="#typefaces">Typefaces</a>
+                        
+                    </li>
             
-        
-            <li class="second-level"><a href="#body-copy">Body Copy</a></li>
+                    <li class="second-level">
+                        <a href="#body-copy">Body Copy</a>
+                        
+                    </li>
             
-        
-            <li class="second-level"><a href="#lead-body-copy">Lead Body Copy</a></li>
+                    <li class="second-level">
+                        <a href="#lead-body-copy">Lead Body Copy</a>
+                        
+                    </li>
             
-        
-            <li class="second-level"><a href="#headings">Headings</a></li>
+                    <li class="second-level">
+                        <a href="#headings">Headings</a>
+                        
+                    </li>
             
-        
-            <li class="second-level"><a href="#blockquotes">Blockquotes</a></li>
+                    <li class="second-level">
+                        <a href="#blockquotes">Blockquotes</a>
+                        
+                    </li>
             
-        
-            <li class="second-level"><a href="#lists">Lists</a></li>
+                    <li class="second-level">
+                        <a href="#lists">Lists</a>
+                        
+                    </li>
             
-        
-            <li class="second-level"><a href="#horizontal-description-lists">Horizontal Description Lists</a></li>
+                    <li class="second-level">
+                        <a href="#horizontal-description-lists">Horizontal Description Lists</a>
+                        
+                    </li>
             
-        
-            <li class="second-level"><a href="#contextual-colors">Contextual Colors</a></li>
+                    <li class="second-level">
+                        <a href="#contextual-colors">Contextual Colors</a>
+                        
+                    </li>
             
-        
+            </ul>
+        </li>
     
-        <li class="first-level "><a href="#code">Code</a></li>
-        
-            <li class="second-level"><a href="#inline-code">Inline Code</a></li>
+        <li class="">
+            <a href="#code">Code</a>
+            <ul class="nav">
+                
+                    <li class="second-level">
+                        <a href="#inline-code">Inline Code</a>
+                        
+                    </li>
             
-        
+            </ul>
+        </li>
     
-        <li class="first-level "><a href="#tables">Tables</a></li>
-        
-            <li class="second-level"><a href="#striped-table">Striped Table</a></li>
+        <li class="">
+            <a href="#tables">Tables</a>
+            <ul class="nav">
+                
+                    <li class="second-level">
+                        <a href="#striped-table">Striped Table</a>
+                        
+                    </li>
             
-        
-            <li class="second-level"><a href="#bordered-table">Bordered Table</a></li>
+                    <li class="second-level">
+                        <a href="#bordered-table">Bordered Table</a>
+                        
+                    </li>
             
-        
+            </ul>
+        </li>
     
-        <li class="first-level "><a href="#buttons">Buttons</a></li>
-        
-            <li class="second-level"><a href="#default-buttons">Default Buttons</a></li>
+        <li class="">
+            <a href="#buttons">Buttons</a>
+            <ul class="nav">
+                
+                    <li class="second-level">
+                        <a href="#default-buttons">Default Buttons</a>
+                        
+                    </li>
             
-        
-            <li class="second-level"><a href="#styled-buttons">Styled Buttons</a></li>
+                    <li class="second-level">
+                        <a href="#styled-buttons">Styled Buttons</a>
+                        
+                    </li>
             
-        
-            <li class="second-level"><a href="#button-sizes">Button Sizes</a></li>
+                    <li class="second-level">
+                        <a href="#button-sizes">Button Sizes</a>
+                        
+                    </li>
             
-        
-            <li class="second-level"><a href="#block-level-buttons">Block Level Buttons</a></li>
+                    <li class="second-level">
+                        <a href="#block-level-buttons">Block Level Buttons</a>
+                        
+                    </li>
             
-        
+            </ul>
+        </li>
     
     </ul>
 </div></div>
@@ -395,12 +446,18 @@
         
     </div>
 
-    <footer class="col-md-12 text-center">
-        <hr>
-        <p>
-        <small>Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a><br></small>
-        
-        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    <footer class="col-md-12" >
+        <hr />
+        <div class="pull-left col-md-6">
+            
+            
+        </div>
+        <div class="pull-right col-md-4 text-right">
+            <p>
+            <small>Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a><br></small>
+            
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+        </div>
     </footer>
 
     <script src="../js/jquery-1.10.2.min.js"></script>

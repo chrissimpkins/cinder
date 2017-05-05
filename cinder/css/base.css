@@ -9,14 +9,6 @@ h1[id]:before, h2[id]:before, h3[id]:before, h4[id]:before, h5[id]:before, h6[id
     height: 75px;
 }
 
-ul.nav li.first-level {
-    font-weight: bold;
-}
-
-ul.nav li.third-level {
-    padding-left: 12px;
-}
-
 div.col-md-3 {
     padding-left: 0;
 }
@@ -73,16 +65,36 @@ div.source-links {
     border-right: 1px solid;
 }
 
-/* Nav: second level (shown on .active) */
+/* Default show all ToC */
 .bs-sidebar .nav .nav {
-    display: none; /* Hide by default, but at >768px, show it */
-    margin-bottom: 8px;
+    display: block;
 }
+
 .bs-sidebar .nav .nav > li > a {
     padding-top:    3px;
     padding-bottom: 3px;
     padding-left: 30px;
     font-size: 90%;
+}
+
+/* Third level */
+.bs-sidebar .nav .nav .nav > li > a {
+    padding-left: 45px;
+}
+
+/* Fourth level */
+.bs-sidebar .nav .nav .nav .nav > li > a {
+    padding-left: 60px;
+}
+
+/* Fifth level */
+.bs-sidebar .nav .nav .nav .nav .nav > li > a {
+    padding-left: 75px;
+}
+
+/* Sixth level */
+.bs-sidebar .nav .nav .nav .nav .nav .nav > li > a {
+    padding-left: 90px;
 }
 
 /* Show and affix the side nav when space allows it */
@@ -165,4 +177,9 @@ div.source-links {
     -webkit-border-radius: 6px 0 6px 6px;
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
+}
+
+/* Make images auto-resize to fit column */
+img {
+    max-width: 100%
 }
