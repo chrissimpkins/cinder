@@ -2,8 +2,14 @@
 
 ## About
 
-Cindercone is a [Cinder](https://github.com/chrissimpkins/cinder) clone. Cinder
-is a clean, responsive theme for static documentation sites that are generated with [MkDocs](https://github.com/mkdocs/mkdocs). It's built on the [Bootstrap framework](http://getbootstrap.com/) and includes pre-packaged syntax highlighting ([highlight.js](https://highlightjs.org/)), icons (<i class="fa fa-flag"></i> [FontAwesome](https://fortawesome.github.io/Font-Awesome/)), and a smashingly legible type scheme to get your message out to your users.
+[Cindercone](https://github.com/scotte/cindercone) is a
+[Cinder](https://github.com/chrissimpkins/cinder) clone. Cinder is a clean,
+responsive theme for static documentation sites that are generated with
+[MkDocs](https://github.com/mkdocs/mkdocs). It's built on the [Bootstrap
+framework](http://getbootstrap.com/) and includes pre-packaged syntax
+highlighting ([highlight.js](https://highlightjs.org/)), icons (<i class="fa
+fa-flag"></i> [FontAwesome](https://fortawesome.github.io/Font-Awesome/)), and a
+smashingly legible type scheme to get your message out to your users.
 
 All credit goes to Chris Simpkins for the great original Cinder theme. Thanks!
 
