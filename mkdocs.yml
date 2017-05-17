@@ -1,10 +1,9 @@
-site_name: Cinder
-theme_dir: cinder
-site_author: Christopher Simpkins
+site_name: Cindercone
+theme_dir: cindercone
+site_author: Scott Emmons
 site_description: "A clean, responsive theme for static documentation websites that are generated with MkDocs"
-repo_url: "https://github.com/chrissimpkins/cinder"
-copyright: "Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a>"
+repo_url: "https://github.com/scotte/cindercone"
+copyright: "Cinder is licensed under the <a href='https://github.com/scotte/cindercone/blob/master/LICENSE.md'>MIT license</a>"
 pages:
   - Home: index.md
   - Specimen: specimen.md
-
