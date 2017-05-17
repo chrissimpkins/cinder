@@ -33,7 +33,7 @@ Then navigate to the root of your project directory:
 
 Download the Cindercone theme archive.
 
-<a href="https://github.com/scotte/cindercone/releases/download/v1.0.0/cinder.zip"><button type="button" class="btn btn-success"><i class="fa fa-cloud-download"></i>  Download Cindercone v1.0.0</button></a>
+<a href="https://github.com/scotte/cindercone/releases/download/v1.0.0/cindercone.zip"><button type="button" class="btn btn-success"><i class="fa fa-cloud-download"></i>  Download Cindercone v1.0.0</button></a>
 
 Unpack the contents of the archive into a directory named `cindercone` at the top level of your MkDocs project directory.
 
