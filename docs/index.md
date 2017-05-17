@@ -152,7 +152,7 @@ Include the `repo_url` field and define it with your repository URL:
 
 <pre><code class="yaml">site_name: [YOURPROJECT]
 theme_dir: cindercone
-repo_url: "https://github.com/scotte/cindescotte"
+repo_url: "https://github.com/scotte/cindercone"
 pages:
   - Home: index.md
   - About: about.md</code></pre>
@@ -164,7 +164,7 @@ The link appears at the upper right hand corner of your site.
 The Cindercone theme displays your license declaration in the footer if you include a `copyright` field and define it with the text (and optionally the HTML link) that you would like to display:
 
 <pre><code class="yaml">site_name: [YOURPROJECT]
-theme_dir: cindescotte
+theme_dir: cindercone
 copyright: "Cindercone is licensed under the &lt;a href='https://github.com/scotte/cindercone/blob/master/LICENSE.md'&gt;MIT license</a>"
 pages:
   - Home: index.md
