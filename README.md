@@ -13,6 +13,12 @@ All credit goes to Chris Simpkins for the great original Cinder theme. Thanks!
 + Focus is automatically set on the search input box.
 + The footer has been fixed to not encroach on the sidenav TOC.
 + The sidenav TOC shows page heirachy up to three levels deep, instead of
-  sections within the current page..
+  sections within the current page.
++ Support for repository links to editable pages.
+
+The sidenav TOC change is related to an organizational structure for my own
+documentation which is a deeper structure of relatively short pages. So, instead
+of showing headings in the current page like Cinder, this theme shows all the
+pages, essentially duplicating the structure available in the navbar.
 
 [Demo and Documentation](https://scotte.github.io/cindercone)
