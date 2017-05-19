@@ -13,8 +13,13 @@ ul.nav li.first-level {
     font-weight: bold;
 }
 
-ul.nav li.third-level {
+ul.nav li.second-level {
     padding-left: 12px;
+}
+
+
+ul.nav li.third-level {
+    padding-left: 24px;
 }
 
 div.col-md-3 {
@@ -43,6 +48,8 @@ div.source-links {
 
 .bs-sidebar.well {
     padding: 0;
+    max-height: 90%;
+    overflow-y: auto;
 }
 
 /* First level of nav */
@@ -71,6 +78,11 @@ div.source-links {
     font-weight: bold;
     background-color: transparent;
     border-right: 1px solid;
+}
+.bs-sidebar .nav > li > span {
+    display: block;
+    padding: 5px 20px;
+    z-index: 1;
 }
 
 /* Nav: second level (shown on .active) */

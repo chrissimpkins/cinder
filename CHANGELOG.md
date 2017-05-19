@@ -1,4 +1,12 @@
-## Changelog
+# Changelog
+
+## Cindercone Changelog
+
+### v1.0.0
+
+- Initial release
+
+## Original Cinder Changelog
 
 ### v0.9.4
 

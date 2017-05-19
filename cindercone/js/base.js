@@ -17,4 +17,9 @@ $("li.disabled a").click(function() {
 });
 
 
-
+$(document).ready(function() {
+    /* Set focus to text input when search modal is displayed */
+    $('#mkdocs_search_modal').on('shown.bs.modal', function () {
+      $('#mkdocs-search-query').focus();
+    });
+});

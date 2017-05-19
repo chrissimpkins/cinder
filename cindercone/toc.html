@@ -1,0 +1,29 @@
+<div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    {% for toc_item in nav %}
+        {% if toc_item.children %}
+	    {% if toc_item.url %}
+                <li class="first-level"><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+            {% else %}
+                <li class="first-level"><span>{{ toc_item.title }}</span></li>
+            {% endif %}
+            {% for toc_item in toc_item.children %}
+                {% if toc_item.children %}
+	            {% if toc_item.url %}
+                        <li class="second-level"><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+		    {% else %}
+                        <li class="second-level"><span>{{ toc_item.title }}</span></li>
+		    {% endif %}
+                    {% for toc_item in toc_item.children %}
+                        <li class="third-level {% if toc_item.active %}active{% endif %}"><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+                    {% endfor %}
+	    {% else %}
+                <li class="second-level {% if toc_item.active %}active{% endif %}"><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+	{% else %}
+            <li class="first-level {% if toc_item.active %}active{% endif %}"><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+</div>

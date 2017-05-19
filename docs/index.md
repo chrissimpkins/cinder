@@ -1,10 +1,20 @@
-<h1>Cinder Theme <small>for MkDocs</small></h1>
+<h1>Cindercone Theme <small>for MkDocs</small></h1>
 
 ## About
 
-Cinder is a clean, responsive theme for static documentation sites that are generated with [MkDocs](https://github.com/mkdocs/mkdocs). It's built on the [Bootstrap framework](http://getbootstrap.com/) and includes pre-packaged syntax highlighting ([highlight.js](https://highlightjs.org/)), icons (<i class="fa fa-flag"></i> [FontAwesome](https://fortawesome.github.io/Font-Awesome/)), and a smashingly legible type scheme to get your message out to your users.
+[Cindercone](https://github.com/scotte/cindercone) is a
+[Cinder](https://github.com/chrissimpkins/cinder) clone. Cinder is a clean,
+responsive theme for static documentation sites that are generated with
+[MkDocs](https://github.com/mkdocs/mkdocs). It's built on the [Bootstrap
+framework](http://getbootstrap.com/) and includes pre-packaged syntax
+highlighting ([highlight.js](https://highlightjs.org/)), icons (<i class="fa
+fa-flag"></i> [FontAwesome](https://fortawesome.github.io/Font-Awesome/)), and a
+smashingly legible type scheme to get your message out to your users.
 
-You are looking at the theme and can see a selection of the theme elements on the [Specimen page](/specimen/).
+All credit goes to Chris Simpkins for the great original Cinder theme. Thanks!
+
+You are looking at the theme and can see a selection of the theme elements on
+the [Specimen page](/specimen/).
 
 ## Install
 
@@ -16,7 +26,8 @@ If you haven't installed MkDocs yet, use the following command to install it:
 
 <pre><code class="nohighlight">$ pip install mkdocs</code></pre>
 
-Next, navigate to a clean directory and create a new MkDocs project with the following command:
+Next, navigate to a clean directory and create a new MkDocs project with the
+following command:
 
 <pre><code class="nohighlight">$ mkdocs new [projectname]</code></pre>
 
@@ -26,39 +37,23 @@ Then navigate to the root of your project directory:
 
 <pre><code class="nohighlight">$ cd [projectname]</code></pre>
 
-### Install the Cinder Theme
+### Install the Cindercone Theme
 
-Choose one of the following install approaches:
+Download the Cindercone theme archive.
 
-#### 1. Install with pip
+<a
+href="https://github.com/scotte/cindercone/releases/download/v1.0.0/cindercone.zip"><button
+type="button" class="btn btn-success"><i class="fa fa-cloud-download"></i>
+Download Cindercone v1.0.0</button></a>
 
-If you are using MkDocs v0.15.0 or higher, you can install the Cinder theme with pip using the command:
-
-<pre><code class="nohighlight">$ pip install mkdocs-cinder</code></pre>
-
-MkDocs projects use a YAML settings file called `mkdocs.yml`.  This is located in the root of your project directory after you use the `mkdocs new` command.  Open the file in a text editor and modify it to define Cinder in the `theme` setting as follows (note that this is case-sensitive):
-
-<pre><code class="yaml">site_name: [YOURPROJECT]
-theme: cinder
-pages:
-- Home: index.md
-</code></pre>
-
-**Theme Updates**: If you choose the pip install approach, you can update your Cinder theme to new releases with the command `$ pip install --upgrade mkdocs-cinder`.  Then re-build your static site files (see instructions below).
-
-#### 2. Manual Install
-
-Download the Cinder theme archive.
-
-<a href="https://github.com/chrissimpkins/cinder/releases/download/v0.9.4/cinder.zip"><button type="button" class="btn btn-success"><i class="fa fa-cloud-download"></i>  Download Cinder v0.9.4</button></a>
-
-Unpack the contents of the archive into a directory named `cinder` at the top level of your MkDocs project directory.
+Unpack the contents of the archive into a directory named `cindercone` at the
+top level of your MkDocs project directory.
 
 Your project directory should now look like this:
 
 <pre><code class="nohighlight">.
 ├── mkdocs.yml
-├── cinder
+├── cindercone
 │     ├── css
 │     ├── img
 │     ├── js
@@ -72,15 +67,21 @@ Your project directory should now look like this:
       └── index.md
 </code></pre>
 
-MkDocs projects use a YAML settings file called `mkdocs.yml`.  This is located in the root of your project directory after you use the `mkdocs new` command.  Open the file in a text editor and modify it to include the `theme_dir` setting as follows:
+MkDocs projects use a YAML settings file called `mkdocs.yml`.  This is located
+in the root of your project directory after you use the `mkdocs new` command.
+Open the file in a text editor and modify it to include the `theme_dir` setting
+as follows:
 
 <pre><code class="yaml">site_name: [YOURPROJECT]
-theme_dir: cinder
+theme_dir: cindercone
 pages:
 - Home: index.md
 </code></pre>
 
-**Theme Updates**: If you choose the manual install approach, you can update your Cinder theme by downloading the new cinder.zip release archive and including it in your project. Then re-build your static site files (see instructions below).
+**Theme Updates**: If you choose the manual install approach, you can update
+your Cindercone theme by downloading the new cindercone.zip release archive and
+including it in your project. Then re-build your static site files (see
+instructions below).
 
 ## Test with a Local Site Server
 
@@ -95,16 +96,22 @@ Then open your site in any browser at the URL `http://localhost:8000`.
 
 ### Add Content with Markdown Syntax
 
-Get to work on your site home page by opening the `docs/index.md` file and editing it in Markdown syntax.  The HTML automatically updates in the browser when you save the Markdown file if you use the MkDocs server (see command above).
+Get to work on your site home page by opening the `docs/index.md` file and
+editing it in Markdown syntax.  The HTML automatically updates in the browser
+when you save the Markdown file if you use the MkDocs server (see command
+above).
 
 ### Add New Pages
 
-Add new pages to your site by creating a new Markdown file in your `docs` directory, then linking to the new page in the `mkdocs.yml` file.  This uses a `Page Name : Markdown file` syntax.
+Add new pages to your site by creating a new Markdown file in your `docs`
+directory, then linking to the new page in the `mkdocs.yml` file.  This uses a
+`Page Name : Markdown file` syntax.
 
-For example, to add an About page using a Markdown file that is located on the path `docs/about.md`, you would format the `mkdocs.yml` file as follows:
+For example, to add an About page using a Markdown file that is located on the
+path `docs/about.md`, you would format the `mkdocs.yml` file as follows:
 
 <pre><code class="yaml">site_name: [YOURPROJECT]
-theme_dir: cinder
+theme_dir: cindercone
 pages:
 - Home: index.md
 - About: about.md</code></pre>
@@ -117,18 +124,23 @@ Build your site files with the command:
 
 <pre><code class="nohighlight">$ mkdocs build</code></pre>
 
-Your site files are built in the `site` directory and are ready to use.  Deploy the contents of the `site` directory to your web server.
+Your site files are built in the `site` directory and are ready to use.  Deploy
+the contents of the `site` directory to your web server.
 
 ## Site Customization
 
-The following are a few common customizations that you might be interested in.  For much more detail about the configuration of your site, check out the [MkDocs Configuration documentation](https://github.com/mkdocs/mkdocs/blob/master/docs/user-guide/configuration.md).
+The following are a few common customizations that you might be interested in.
+For much more detail about the configuration of your site, check out the [MkDocs
+Configuration
+documentation](https://github.com/mkdocs/mkdocs/blob/master/docs/user-guide/configuration.md).
 
 ### Site Favicon
 
-Place your site favicon image file in the top level of your docs directory and then include a new `site_favicon:` field in the `mkdocs.yml` file:
+Place your site favicon image file in the top level of your docs directory and
+then include a new `site_favicon:` field in the `mkdocs.yml` file:
 
 <pre><code class="yaml">site_name: [YOURPROJECT]
-theme_dir: cinder
+theme_dir: cindercone
 site_favicon: favicon.ico
 pages:
   - Home: index.md
@@ -136,10 +148,12 @@ pages:
 
 ### Add Your Own CSS Stylesheets
 
-Create a `css` directory inside your `docs` directory and add your CSS files.  You can overwrite any of the Cinder styles in your CSS files.  Then include your CSS files in the `mkdocs.yml` file with the `extra_css` field:
+Create a `css` directory inside your `docs` directory and add your CSS files.
+You can overwrite any of the Cindercone styles in your CSS files.  Then include
+your CSS files in the `mkdocs.yml` file with the `extra_css` field:
 
 <pre><code class="yaml">site_name: [YOURPROJECT]
-theme_dir: cinder
+theme_dir: cindercone
 extra_css:
   - "css/mystyle.css"
   - "css/myotherstyle.css"
@@ -147,15 +161,20 @@ pages:
   - Home: index.md
   - About: about.md</code></pre>
 
-Your CSS styles fall at the end of the cascade and will override all styles included in the theme (including Bootstrap and default Cinder styles).  You can find the Cinder and Bootstrap CSS files on the paths `cinder/css/cinder.css` and `cinder/css/bootstrap.min.css`, respectively.
+Your CSS styles fall at the end of the cascade and will override all styles
+included in the theme (including Bootstrap and default Cindercone styles).  You
+can find the Cindercone and Bootstrap CSS files on the paths
+`cindercone/css/cindercone.css` and `cindercone/css/bootstrap.min.css`,
+respectively.
 
 
 ### Add Your Own JavaScript
 
-Create a `js` directory inside your `docs` directory and add your JS files.  Then include your JS files in the `mkdocs.yml` file with the `extra_js` field:
+Create a `js` directory inside your `docs` directory and add your JS files.
+Then include your JS files in the `mkdocs.yml` file with the `extra_js` field:
 
 <pre><code class="yaml">site_name: [YOURPROJECT]
-theme_dir: cinder
+theme_dir: cindercone
 extra_js:
   - "js/myscript.js"
   - "js/myotherscript.js"
@@ -165,38 +184,67 @@ pages:
 
 ### Github or Bitbucket Repository Link
 
+Git repository links can either navigate to a general link that points to
+your repository, or a deeper link that allows direct editing of pages (which
+is useful, for example, to allow coworkers to edit documentation directly).
+
+The link appears at the upper right hand corner of your site.
+
+#### Repository Links
+
 Include the `repo_url` field and define it with your repository URL:
 
 <pre><code class="yaml">site_name: [YOURPROJECT]
-theme_dir: cinder
-repo_url: "https://github.com/chrissimpkins/cinder"
+theme_dir: cindercone
+repo_url: https://github.com/scotte/cindercone
 pages:
   - Home: index.md
   - About: about.md</code></pre>
 
-The link appears at the upper right hand corner of your site.
+#### Edit Links
+
+Edit links require a bit more configuration. In addition to the **repo_url**, an
+**edit_url**, is appended, along with a path to the page's filename. By default,
+this is **edit/master/docs** for github or **src/default/docs** for bitbucket,
+but can be changed.
+
+Cindercone requires enabling the **edit_repo** flag in **extra** in order to
+enable edit links.
+
+```
+repo_url: https://github.com/scotte/cindercone
+edit_uri: edit/docs
+extra:
+    edit_repo: True
+```
 
 ### License Declaration and Link
 
-The Cinder theme displays your license declaration in the footer if you include a `copyright` field and define it with the text (and optionally the HTML link) that you would like to display:
+The Cindercone theme displays your license declaration in the footer if you
+include a `copyright` field and define it with the text (and optionally the HTML
+link) that you would like to display:
 
 <pre><code class="yaml">site_name: [YOURPROJECT]
-theme_dir: cinder
-copyright: "Cinder is licensed under the &lt;a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'&gt;MIT license</a>"
+theme_dir: cindercone
+copyright: "Cindercone is licensed under the &lt;a href='https://github.com/scotte/cindercone/blob/master/LICENSE.md'&gt;MIT license</a>"
 pages:
   - Home: index.md
   - About: about.md</code></pre>
 
 ## Issues
 
-If you have any issues with the theme, please report them on the Cinder repository:
+If you have any issues with the theme, please report them on the Cindercone
+repository:
 
-<a href="https://github.com/chrissimpkins/cinder/issues/new"><button class="btn btn-primary" type="submit">Report Issue</button></a>
-<a href="https://github.com/chrissimpkins/cinder/issues"><button class="btn btn-primary" type="submit">Active Issues</button></a>
+<a href="https://github.com/scotte/cindercone/issues/new"><button class="btn
+btn-primary" type="submit">Report Issue</button></a>
+<a href="https://github.com/scotte/cindercone/issues"><button class="btn
+btn-primary" type="submit">Active Issues</button></a>
 
 ## License
 
-Cinder is licensed under the MIT license. The full text of the license is available [here](https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md).
+Cindercone is licensed under the MIT license. The full text of the license is
+available [here](https://github.com/scotte/cindercone/blob/master/LICENSE.md).
 
 
 
