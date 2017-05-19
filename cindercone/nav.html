@@ -61,7 +61,7 @@
                 {% endif %}
                 {% if config.repo_url %}
                     <li>
-                        {% if config.edit_repo %}
+                        {% if config.extra.edit_repo %}
                             <a href="{{ page.edit_url }}">
                         {% else %}
                             <a href="{{ config.repo_url }}">

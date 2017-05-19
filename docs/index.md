@@ -205,15 +205,17 @@ pages:
 
 Edit links require a bit more configuration. In addition to the **repo_url**, an
 **edit_url**, is appended, along with a path to the page's filename. By default,
-this is **src/default/docs**, but can be changed.
+this is **edit/master/docs** for github or **src/default/docs** for bitbucket,
+but can be changed.
 
-Cindercone requires enabling the **edit_repo** flag in order to enable edit
-links.
+Cindercone requires enabling the **edit_repo** flag in **extra** in order to
+enable edit links.
 
 ```
 repo_url: https://github.com/scotte/cindercone
 edit_uri: edit/docs
-edit_repo: True
+extra:
+    edit_repo: True
 ```
 
 ### License Declaration and Link
