@@ -60,7 +60,7 @@
     {% endif %}
 </head>
 
-<body{% if current_page and current_page.is_homepage %} class="homepage" {% endif %}>
+<body{% if current_page and current_page.is_homepage %} class="homepage" {% endif %} data-spy="scroll" data-target=".bs-sidebar">
 
     {% include "nav.html" %}
 
