@@ -114,8 +114,6 @@ def get(url, params=None, **kwargs):
 <small>(Source code sample from the Python <a href="https://github.com/requests/requests">requests library</a>, <a href="https://github.com/requests/requests/blob/master/LICENSE">Apache License, v2.0</a>)</small>
 
 
-Syntax highlighting support is available for the following languages:
-
 Syntax highlighting support is available for and of the following languages listed on the <a href="https://highlightjs.org/download/">highlightjs website</a>. See the <a href="https://www.mkdocs.org/user-guide/styling-your-docs/">mkdocs "styling your docs"</a> hljs_languages section for info on how to load languages dynamically.
 
 <div class="bs-callout bs-callout-info">
