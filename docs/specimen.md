@@ -116,35 +116,7 @@ def get(url, params=None, **kwargs):
 
 Syntax highlighting support is available for the following languages:
 
-- Apache
-- Bash
-- C#
-- C++
-- CSS
-- CoffeeScript
-- Diff
-- Go
-- HTML/XML
-- HTTP
-- Ini, TOML
-- JSON
-- Java
-- JavaScript
-- Makefile
-- Markdown
-- Nginx
-- Objective-C
-- PHP
-- Perl
-- Properties
-- Python
-- R
-- Ruby
-- Rust
-- SQL
-- Shell Session
-- Swift
-- YAML
+Syntax highlighting support is available for and of the following languages listed on the <a href="https://highlightjs.org/download/">highlightjs website</a>. See the <a href="https://www.mkdocs.org/user-guide/styling-your-docs/">mkdocs "styling your docs"</a> hljs_languages section for info on how to load languages dynamically.
 
 <div class="bs-callout bs-callout-info">
   <h4>Note</h4>

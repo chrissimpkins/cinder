@@ -21,7 +21,9 @@
     <link href="{{ 'css/bootstrap-custom.min.css'|url }}" rel="stylesheet">
     <link href="{{ 'css/base.min.css'|url }}" rel="stylesheet">
     <link href="{{ 'css/cinder.min.css'|url }}" rel="stylesheet">
-    <link href="{{ 'css/highlight.min.css'|url }}" rel="stylesheet">
+    {% if config.theme.highlightjs %}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/github.min.css">
+    {% endif %}
 
     {%- for path in config['extra_css'] %}
     <link href="{{ path|url }}" rel="stylesheet">
@@ -96,8 +98,13 @@
     {%- block scripts %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="{{ 'js/bootstrap-3.0.3.min.js'|url }}"></script>
-    <script src="{{ 'js/highlight.pack.js'|url }}"></script>
+    {% if config.theme.highlightjs %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    {%- for lang in config.theme.hljs_languages %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/languages/{{lang}}.min.js"></script>
+    {%- endfor %}
     <script>hljs.initHighlightingOnLoad();</script>
+    {% endif %}
     <script>var base_url = {{ base_url | tojson }}</script>
     {% if config.shortcuts %}
         <script>var shortcuts = {{ config.shortcuts | tojson }}</script>
