@@ -8,7 +8,7 @@
     {% if config.site_description %}<meta name="description" content="{{ config.site_description }}">{% endif %}
     {% if config.site_author %}<meta name="author" content="{{ config.site_author }}">{% endif %}
     {% if page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
-    <link rel="{{ 'img/favicon.ico'|url }}">
+    <link rel="shortcut icon" href="{{ config.theme.favicon | url }}">
 
     {% block htmltitle %}
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
