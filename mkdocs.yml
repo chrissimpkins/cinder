@@ -1,5 +1,8 @@
 site_name: Cinder
-theme: cinder
+site_url: "https://sourcefoundry.org/cinder/"
+theme:
+  name: null
+  custom_dir: 'cinder'
 site_author: Christopher Simpkins
 site_description: "A clean, responsive theme for static documentation websites that are generated with MkDocs"
 repo_url: "https://github.com/chrissimpkins/cinder"
