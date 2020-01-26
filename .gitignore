@@ -5,3 +5,4 @@ mkdocs_cinder.egg-info/
 site/*
 cinder/__pycache__/*
 .DS_Store
+.venv
