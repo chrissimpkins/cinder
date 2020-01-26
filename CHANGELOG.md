@@ -1,5 +1,11 @@
 ## Changelog
 
+### v0.18.0
+
+- updated Font Awesome to v5.12.0
+- fixed: search modal close button alignment (PR #79)
+- failure of sitemap.xml generation (IR #80) - added `site_url` field to `mkdocs.yml` and added documentation to explain how to fix this issue when Cinder is used to build documentation
+
 ### v0.17.0
 
 - added support for keyboard shortcut bindings (PR #71)
