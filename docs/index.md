@@ -5,7 +5,7 @@
 Cinder is a clean, responsive theme for static documentation sites that are generated with [MkDocs](https://github.com/mkdocs/mkdocs). It's built on the [Bootstrap 3 framework](https://getbootstrap.com/docs/3.3/) and includes pre-packaged:
 
 <small><i class="fas fa-highlighter" style="color:#FA023C"></i> **[highlight.js v9.13.1](https://highlightjs.org/) syntax highlighting with support for [over 25 programming languages](./specimen#language-support)**</small></br>
-<small><i class="fab fa-font-awesome-alt" style="color:#FA023C"></i> **[FontAwesome v5.5.0](https://fortawesome.github.io/Font-Awesome/) icon support**</small></br>
+<small><i class="fab fa-font-awesome-alt" style="color:#FA023C"></i> **[FontAwesome v5.12.0](https://fortawesome.github.io/Font-Awesome/) icon support**</small></br>
 <small><i class="fas fa-font" style="color:#FA023C"></i> **[smashingly legible type scheme](./specimen#typography) to get your message out to your users**</small>
 
 You are viewing the theme in action and can see a selection of the theme elements on the [Specimen page](./specimen/).
@@ -131,6 +131,37 @@ Build your site files with the command:
 <pre><code class="nohighlight">$ mkdocs build</code></pre>
 
 Your site files are built in the `site` directory and are ready to use.  Deploy the contents of the `site` directory to your web server.
+
+## Important Configuration Issues
+
+<div class="bs-callout bs-callout-warning">
+  <h4><i class="fas fa-exclamation-triangle"></i> Please review these issues before you push your site into a production setting!</h4>
+</div>
+
+### 1. Set the `site_url` configuration field
+You must set the `site_url` field in your `mkdocs.yml` file to the appropriate production URL in order to generate a valid `sitemap.xml` file ([issue #80](https://github.com/chrissimpkins/cinder/issues/80)).
+
+Here is an example from the [Cinder project `mkdocs.yml` file](https://github.com/chrissimpkins/cinder/blob/master/mkdocs.yml):
+
+```yml
+site_name: Cinder
+site_url: "https://sourcefoundry.org/cinder/"
+theme:
+  name: null
+  custom_dir: 'cinder'
+site_author: Christopher Simpkins
+site_description: "A clean, responsive theme for static documentation websites that are generated with MkDocs"
+repo_url: "https://github.com/chrissimpkins/cinder"
+copyright: "Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a>"
+nav:
+  - Home: index.md
+  - Specimen: 
+      - Specimen Source: specimen.md
+markdown_extensions:
+  - admonition
+```
+
+The `sitemap.xml` file will be located at `[SITE_URL]/sitemap.xml` when you push your site into the production environment.  During development the `sitemap.xml` file can be found at `http://127.0.0.1:8000/sitemap.xml`.
 
 ## Site Customization
 
