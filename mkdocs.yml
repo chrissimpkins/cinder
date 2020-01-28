@@ -5,7 +5,8 @@ repo_url: "https://github.com/chrissimpkins/cinder"
 copyright: "Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a>"
 
 theme:
-  name: cinder
+  name: null
+  custom_dir: cinder
   highlightjs: true
   hljs_languages:
     - yaml
