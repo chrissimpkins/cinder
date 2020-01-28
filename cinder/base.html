@@ -23,7 +23,11 @@
     <link href="{{ 'css/base.min.css'|url }}" rel="stylesheet">
     <link href="{{ 'css/cinder.min.css'|url }}" rel="stylesheet">
     {% if config.theme.highlightjs %}
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/github.min.css">
+        {% if config.theme.colorscheme %}
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/{{ config.theme.colorscheme }}.min.css">
+        {% else %}
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        {% endif %}
     {% endif %}
 
     {%- for path in config['extra_css'] %}
@@ -100,9 +104,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="{{ 'js/bootstrap-3.0.3.min.js'|url }}"></script>
     {% if config.theme.highlightjs %}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
     {%- for lang in config.theme.hljs_languages %}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/languages/{{lang}}.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/{{lang}}.min.js"></script>
     {%- endfor %}
     <script>hljs.initHighlightingOnLoad();</script>
     {% endif %}
