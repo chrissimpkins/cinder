@@ -4,7 +4,7 @@
 
 Cinder is a clean, responsive theme for static documentation sites that are generated with [MkDocs](https://github.com/mkdocs/mkdocs). It's built on the [Bootstrap 3 framework](https://getbootstrap.com/docs/3.3/) and includes pre-packaged:
 
-<small><i class="fas fa-highlighter" style="color:#FA023C"></i> **[highlight.js v9.18.0](https://highlightjs.org/) syntax highlighting with support for [185 languages and over 90 styles](https://highlightjs.org/static/demo/)**</small></br>
+<small><i class="fas fa-highlighter" style="color:#FA023C"></i> **[highlight.js v9.18.0](https://highlightjs.org/) syntax highlighting with support for [185 languages (over 30 by default) and over 90 styles](https://highlightjs.org/static/demo/)**</small></br>
 <small><i class="fab fa-font-awesome-alt" style="color:#FA023C"></i> **[FontAwesome v5.5.0](https://fortawesome.github.io/Font-Awesome/) icon support**</small></br>
 <small><i class="fas fa-font" style="color:#FA023C"></i> **[smashingly legible type scheme](./specimen#typography) to get your message out to your users**</small>
 
@@ -166,6 +166,24 @@ The `sitemap.xml` file will be located at `[SITE_URL]/sitemap.xml` when you push
 ## Site Customization
 
 The following are a few common customizations that you might be interested in.  For much more detail about the configuration of your site, check out the [MkDocs Configuration documentation](https://github.com/mkdocs/mkdocs/blob/master/docs/user-guide/configuration.md).
+
+### Syntax Highlighting Color Scheme
+
+Cinder supports the [90+ highlightjs color schemes](https://highlightjs.org/static/demo/).  The `github` color scheme that you see on this page is the default and will be used if you do not specify otherwise.
+
+To change to a different scheme, include the `colorscheme` field under the `theme` field in your `mkdocs.yml` file and enter the color scheme name.  For example, to switch to the [Dracula theme](https://draculatheme.com/), enter the following:
+
+```yml
+theme:
+  name: null
+  custom_dir: cinder
+  colorscheme: dracula
+
+```
+
+and then rebuild your site.
+
+The color scheme name should match the base name of the highlightjs CSS file.  See the [`src/styles` directory of the highlightjs repository](https://github.com/highlightjs/highlight.js/tree/master/src/styles) for a complete list of these CSS paths.
 
 ### Site Favicon
 
