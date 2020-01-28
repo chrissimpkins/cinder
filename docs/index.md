@@ -12,7 +12,7 @@ You are viewing the theme in action and can see a selection of the theme element
 
 ## Install
 
-**<em>Required</em>**: Python 2.7 or 3.4+
+**<em>Required</em>**: Python 3.4+
 
 ### Install MkDocs & Create a New Project
 
