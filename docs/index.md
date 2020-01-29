@@ -32,33 +32,9 @@ Then navigate to the root of your project directory:
 
 ### Install the Cinder Theme
 
-Choose one of the following install approaches:
-
-#### 1. Install with pip (Recommended)
-
-If you are using MkDocs v0.15.0 or higher, you can install the Cinder theme with the Python package manager `pip` using the command:
-
-<pre><code class="shell">$ pip install mkdocs-cinder</code></pre>
-
-MkDocs projects use a YAML settings file called `mkdocs.yml`.  This is located in the root of your project directory after you use the `mkdocs new` command.  Open the file in a text editor and modify it to define Cinder in the `theme` setting as follows (note that this is case-sensitive):
-
-<pre><code class="yaml">site_name: [YOURPROJECT]
-theme: cinder
-nav:
-- Home: index.md</code></pre>
-
-<div class="bs-callout bs-callout-default">
-  <h4>Updates with <code>pip</code></h4>
-  <p>Update your pip-installed Cinder theme to new releases with the command:</p>
-  <p><code>$ pip install --upgrade mkdocs-cinder</code></p>
-  <p>Then rebuild the static files (see documentation below)</p>
-</div>
-
-#### 2. Manual Install
-
 Download the Cinder theme archive by clicking the button below.
 
-<a href="https://github.com/chrissimpkins/cinder/archive/v0.18.0.zip"><button type="button" class="btn btn-success"><i class="fas fa-cloud-download-alt fa-3x"></i> </br>  <span style="font-size:20px;">Download Cinder</span></button></a>
+<a href="https://github.com/chrissimpkins/cinder/archive/v0.19.0.zip"><button type="button" class="btn btn-success"><i class="fas fa-cloud-download-alt fa-3x"></i> </br>  <span style="font-size:20px;">Download Cinder</span></button></a>
 
 Unpack the contents of the archive into a directory named `cinder` at the top level of your MkDocs project directory.
 
@@ -117,7 +93,9 @@ Add new pages to your site by creating a new Markdown file in your `docs` direct
 For example, to add an About page using a Markdown file that is located on the path `docs/about.md`, you would format the `mkdocs.yml` file as follows:
 
 <pre><code class="yaml">site_name: [YOURPROJECT]
-theme: cinder
+theme:
+  name: null
+  custom_dir: 'cinder'
 nav:
   - Home: index.md
   - About: about.md</code></pre>
@@ -145,18 +123,24 @@ Here is an example from the [Cinder project `mkdocs.yml` file](https://github.co
 
 ```yml
 site_name: Cinder
-site_url: "https://sourcefoundry.org/cinder/"
-theme:
-  name: null
-  custom_dir: 'cinder'
+site_url: https://sourcefoundry.org/cinder/
 site_author: Christopher Simpkins
 site_description: "A clean, responsive theme for static documentation websites that are generated with MkDocs"
 repo_url: "https://github.com/chrissimpkins/cinder"
 copyright: "Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a>"
+
+theme:
+  name: null
+  custom_dir: cinder
+  colorscheme: github
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
 nav:
   - Home: index.md
-  - Specimen: 
-      - Specimen Source: specimen.md
+  - Specimen: specimen.md
+
 markdown_extensions:
   - admonition
 ```
@@ -187,14 +171,7 @@ The color scheme name should match the base name of the highlightjs CSS file.  S
 
 ### Site Favicon
 
-Place your site favicon image file in the top level of your docs directory and then include a new `site_favicon:` field in the `mkdocs.yml` file:
-
-<pre><code class="yaml">site_name: [YOURPROJECT]
-theme: cinder
-site_favicon: favicon.ico
-nav:
-  - Home: index.md
-  - About: about.md</code></pre>
+Create an `img` subdirectory in your `docs` directory and add a custom favicon.ico file.  See the [MkDocs documentation](https://www.mkdocs.org/#changing-the-favicon-icon) for additional details.
 
 ### Add Your Own CSS Stylesheets
 
@@ -227,7 +204,7 @@ nav:
 
 ### Keyboard shortcuts
 
-In your `mkdocs.yml` file, place the following to enable keyboard shortcuts. 
+Place the following in your `mkdocs.yml` file to enable keyboard shortcuts:
 
 ```shell
 shortcuts:
@@ -247,7 +224,7 @@ Create a new directory within your project (e.g., `cinder-theme-ext/`) and creat
 {% extends "base.html" %}
 ```
 
-Instead of using `theme: cinder` or `theme_dir: cinder` in `mkdocs.yml`, use:
+Instead of using `theme_dir: cinder` in `mkdocs.yml`, use:
 
 <pre><code class="yaml">theme:
     name: cinder
