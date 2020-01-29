@@ -169,6 +169,25 @@ and then rebuild your site.
 
 The color scheme name should match the base name of the highlightjs CSS file.  See the [`src/styles` directory of the highlightjs repository](https://github.com/highlightjs/highlight.js/tree/master/src/styles) for a complete list of these CSS paths.
 
+### Syntax Highlighting Language Support
+
+By default, Cinder supports the ~30 syntaxes listed under `common` in [the documentation](https://highlightjs.org/static/demo/).  You can broaden support to any of the over 130 highlightjs languages using definitions in your `mkdocs.yml` file.
+
+To add a new language, create a list of additional languages as a `hljs_languages` sub-field under the `theme` field in the `mkdocs.yml` file.  The definitions are formatted as a newline-delimited list with `-` characters.
+
+For example, to add support for the Julia and Perl languages, format your configuration file like this:
+
+```yml
+theme:
+  name: null
+  custom_dir: cinder
+  hljs_languages:
+      - julia
+      - perl
+```
+
+Use the base file name of the [JavaScript files located in the CDN](https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/) for your syntax definitions.
+
 ### Site Favicon
 
 Create an `img` subdirectory in your `docs` directory and add a custom favicon.ico file.  See the [MkDocs documentation](https://www.mkdocs.org/#changing-the-favicon-icon) for additional details.
