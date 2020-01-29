@@ -4,7 +4,7 @@
 
 ### Typefaces
 
-- Headers: [PT Sans](https://www.google.com/fonts/specimen/PT+Sans)
+- Headers: [Inter](https://github.com/rsms/inter)
 - Body: [Open Sans](https://www.google.com/fonts/specimen/Open+Sans)
 - Code: [Hack](http://sourcefoundry.org/hack/)
 
