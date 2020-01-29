@@ -10,8 +10,6 @@ theme:
   custom_dir: cinder
   colorscheme: github
   highlightjs: true
-  hljs_languages:
-    - yaml
 
 nav:
   - Home: index.md
