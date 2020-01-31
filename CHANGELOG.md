@@ -1,5 +1,11 @@
 ## Changelog
 
+### v1.0.0
+
+- convert to Inter typeface for headers
+- convert to Inter typeface for side navigation menu
+- increase H2 header top margin spacing
+
 ### v0.18.0
 
 - updated Font Awesome to v5.12.0
