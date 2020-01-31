@@ -16,6 +16,11 @@ h1, h2, h3, h4, h5, h6 {
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
     color: #B1B7B9;
 }
+
+h2 {
+    margin-top: 35px;
+}
+
 h1, h2 {
     font-weight: 700;
 }
@@ -54,7 +59,8 @@ pre {
 .bs-sidenav {
     background-image: url("../img/grid11.png");
     background-repeat: repeat;
-    font-size: 12px;
+    font-family: Inter,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
 }
 .well {
     background-color: #FCFDFF;
