@@ -1,5 +1,11 @@
 ## Changelog
 
+### v1.0.1
+
+- fixed: removed duplicate hijs source initialization (PR #86)
+- improved formatting of base.js source
+- removed webfonts.js for Open Sans / PT Sans - Improves page load times, I don't see a significant downside in my testing
+
 ### v1.0.0
 
 - convert to Inter typeface for headers
