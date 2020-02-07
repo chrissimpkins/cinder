@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.0.2
+
+- fixed: incorrect position of p closing tag in the copyright footer (PR #88)
+
 ### v1.0.1
 
 - fixed: removed duplicate hijs source initialization (PR #86)
