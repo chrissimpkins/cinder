@@ -3,6 +3,7 @@
 ### v1.0.2
 
 - fixed: incorrect position of p closing tag in the copyright footer (PR #88)
+- fixed: incorrect position of br tag in footer
 
 ### v1.0.1
 
