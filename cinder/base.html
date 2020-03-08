@@ -8,7 +8,7 @@
     {% if config.site_description %}<meta name="description" content="{{ config.site_description }}">{% endif %}
     {% if config.site_author %}<meta name="author" content="{{ config.site_author }}">{% endif %}
     {% if page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
-    <link rel="{{ 'img/favicon.ico'|url }}">
+    <link rel="shortcut icon" href="{{ 'img/favicon.ico'|url }}">
 
     {% block htmltitle %}
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
@@ -92,7 +92,7 @@
         {% endif %}
         {% endblock %}
     </footer>
-    
+
     {%- block scripts %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="{{ 'js/bootstrap-3.0.3.min.js'|url }}"></script>
