@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.0.3
+
+- fixed: favicon link
+
 ### v1.0.2
 
 - fixed: incorrect position of p closing tag in the copyright footer (PR #88)
