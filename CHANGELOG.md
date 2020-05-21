@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.0.4
+
+- fixed: default highlightjs support is supposed to be active by default and is not supposed to require configuration in the `mkdocs.yml` file.  This behavior was restored after recent changes.  highlightjs support can be removed by setting `theme > highlightjs` to `false`.
+
 ### v1.0.3
 
 - fixed: favicon link
