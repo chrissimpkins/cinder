@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.0.5
+
+- fixed: long menu scrolling bug with base.css and base.min.css updates (#94)
+
 ### v1.0.4
 
 - fixed: default highlightjs support is supposed to be active by default and is not supposed to require configuration in the `mkdocs.yml` file.  This behavior was restored after recent changes.  highlightjs support can be removed by setting `theme > highlightjs` to `false`.

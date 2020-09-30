@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = "1.0.4"
+VERSION = "1.0.5"
 
 
 setup(
@@ -13,6 +13,10 @@ setup(
     author_email="chris@sourcefoundry.org",
     packages=find_packages(),
     include_package_data=True,
-    entry_points={"mkdocs.themes": ["cinder = cinder",]},
+    entry_points={
+        "mkdocs.themes": [
+            "cinder = cinder",
+        ]
+    },
     zip_safe=False,
 )
