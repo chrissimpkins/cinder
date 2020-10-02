@@ -103,8 +103,8 @@ div.source-links {
     .bs-sidebar.affix {
         position: fixed; /* Undo the static from mobile first approach */
         top: 80px;
-        max-height: 85%;
-        overflow-y: scroll;
+        max-height: calc(100% - 180px);
+        overflow-y: auto;
     }
     .bs-sidebar.affix-bottom {
         position: absolute; /* Undo the static from mobile first approach */
