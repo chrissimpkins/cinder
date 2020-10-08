@@ -1,5 +1,10 @@
 ## Changelog
 
+### v1.0.6
+
+- fixed: sidebar height to prevent overlap of footer
+- changed: sidebar scrollbar shows only when needed 
+
 ### v1.0.5
 
 - fixed: long menu scrolling bug with base.css and base.min.css updates (#94)
