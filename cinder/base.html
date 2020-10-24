@@ -80,20 +80,25 @@
         {% endblock %}
     </div>
 
-    <footer class="col-md-12 text-center">
-        {% block footer %}
-        <hr>
-        <p>{% if config.copyright %}
-        <small>{{ config.copyright }}</small><br>
-        {% endif %}
-        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
-        </p>
+    {% if not config.theme.disable_footer %}
+      <footer class="col-md-12 text-center">
+          {% block footer %}
+          <hr>
 
-        {% if page and page.meta.revision_date %}<br>
-        <small>Revised on: {{ page.meta.revision_date }}</small>
-        {% endif %}
-        {% endblock %}
-    </footer>
+          {% if not config.theme.disable_footer_except_revision %}
+            <p>{% if config.copyright %}
+            <small>{{ config.copyright }}</small><br>
+            {% endif %}
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          {% endif %}
+
+          {% if page and page.meta.revision_date %}<br>
+          <small>Revised on: {{ page.meta.revision_date }}</small>
+          {% endif %}
+          {% endblock %}
+      </footer>
+    {% endif %}
 
     {%- block scripts %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

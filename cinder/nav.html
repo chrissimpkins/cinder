@@ -15,7 +15,9 @@
 
             <!-- Main title -->
 
-            <a class="navbar-brand" href="{{ nav.homepage.url|url }}">{{ config.site_name }}</a>
+            {% if not config.theme.disable_nav_site_name %}
+              <a class="navbar-brand" href="{{ nav.homepage.url|url }}">{{ config.site_name }}</a>
+            {% endif %}
         </div>
 
         <!-- Expanded navigation -->
@@ -46,7 +48,7 @@
 
             <ul class="nav navbar-nav navbar-right">
                 {%- block search_button %}
-                    {%- if 'search' in config['plugins'] %}
+                    {%- if 'search' in config['plugins'] and not config.theme.disable_nav_search %}
                     <li>
                         <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
                             <i class="fas fa-search"></i> Search
@@ -56,7 +58,7 @@
                 {%- endblock %}
 
                 {%- block next_prev %}
-                    {%- if page and (page.next_page or page.previous_page) %}
+                    {%- if page and (page.next_page or page.previous_page) and not config.theme.disable_nav_previous_next %}
                     <li {% if not page.previous_page %}class="disabled"{% endif %}>
                         <a rel="prev" {% if page.previous_page %}href="{{ page.previous_page.url|url }}"{% endif %}>
                             <i class="fas fa-arrow-left"></i> Previous
