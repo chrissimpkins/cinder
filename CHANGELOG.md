@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.1.0
+
+- new: added optional header on hover permalink support with the `markdown_extensions` > `-toc` > `permalink: true` configuration (#95)
+
 ### v1.0.6
 
 - fixed: sidebar height to prevent overlap of footer
