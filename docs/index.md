@@ -307,6 +307,25 @@ nav:
   - Home: index.md
   - About: about.md</code></pre>
 
+### Disabling Theme Features
+
+The Cinder theme can turn off some theme features entirely in `mkdocs.yml`, for situations where you don't need these features. If this is all the customization required, it saves overriding theme files. For example:
+
+```yml
+theme:
+  name: cinder
+  # Turn off Previous/Next navigation links in the navbar
+  disable_nav_previous_next: true
+  # Turn off Search in the navbar
+  disable_nav_search: true
+  # Turn off the site_name link in the navbar
+  disable_nav_site_name: true
+  # Turn off the footer entirely
+  disable_footer: true
+  # Turn off the default footer message, but display the page revision date if it's available
+  disable_footer_except_revision: true
+```
+
 ## Issues
 
 If you have any issues with the theme, please report them on the Cinder repository:
