@@ -83,9 +83,8 @@
     {% if not config.theme.disable_footer %}
       <footer class="col-md-12 text-center">
           {% block footer %}
-          <hr>
-
           {% if not config.theme.disable_footer_except_revision %}
+            <hr>
             <p>{% if config.copyright %}
             <small>{{ config.copyright }}</small><br>
             {% endif %}
@@ -93,8 +92,9 @@
             </p>
           {% endif %}
 
-          {% if page and page.meta.revision_date %}<br>
-          <small>Revised on: {{ page.meta.revision_date }}</small>
+          {% if page and page.meta.revision_date %}
+          {% if config.theme.disable_footer_except_revision %}<hr>{% else %}<br>{% endif %}
+            <small>Revised on: {{ page.meta.revision_date }}</small>
           {% endif %}
           {% endblock %}
       </footer>
