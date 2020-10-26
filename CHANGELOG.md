@@ -1,5 +1,14 @@
 ## Changelog
 
+### v1.2.0
+
+- add the following configuration settings to toggle UI features off (#98):
+  - `disable_nav_previous_next`: Turn off Previous/Next navigation links in the navbar
+  - `disable_nav_search`: Turn off Search in the navbar
+  - `disable_nav_site_name`: Turn off the site_name link in the navbar
+  - `disable_footer`: Turn off the footer entirely
+  - `disable_footer_except_revision`: Turn off the default footer message, but display the page revision date if it's available
+
 ### v1.1.0
 
 - new: added optional header on hover permalink support with the `markdown_extensions` > `-toc` > `permalink: true` configuration (#95)
