@@ -210,11 +210,11 @@ Your CSS styles fall at the end of the cascade and will override all styles incl
 
 ### Add Your Own JavaScript
 
-Create a `js` directory inside your `docs` directory and add your JS files.  Then include your JS files in the `mkdocs.yml` file with the `extra_js` field:
+Create a `js` directory inside your `docs` directory and add your JS files.  Then include your JS files in the `mkdocs.yml` file with the `extra_javascript` field:
 
 <pre><code class="yaml">site_name: [YOURPROJECT]
 theme: cinder
-extra_js:
+extra_javascript:
   - "js/myscript.js"
   - "js/myotherscript.js"
 nav:
