@@ -1,20 +1,44 @@
 /*
   Cinder Theme for MkDocs | Copyright 2015 Christopher Simpkins | MIT License
 */
+:root {
+    --main-background-color: #FFF;
+    --secondary-background-color: #FCFDFF;
+    --header-background-color: #343838;
+    --main-text-color: #343838;
+    --main-title-color: #222;
+    --secondary-title-color: #B1B7B9;
+    --header-border-color: #EBF2F2;
+    --menu-border-color: #E8E8E8;
+    --code-color: #333;
+}
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-background-color: rgb(24, 26, 27);
+        --secondary-background-color: rgb(28, 30, 31);
+        --header-background-color: rgb(41, 44, 46);
+        --main-text-color: rgb(198, 193, 185);
+        --main-title-color: rgb(211, 207, 201);
+        --secondary-title-color: #B1B7B9;
+        --header-border-color: rgb(53, 57, 59);
+        --menu-border-color: rgb(54, 59, 61);
+        --code-color: #C8C3BC;
+    }
+}
 body {
     font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.7;
-    background-color: #FFF;
-    color: #343838;
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
 }
 h1, h2, h3, h4, h5, h6 {
     font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #222;
+    color: var(--main-title-color);
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
-    color: #B1B7B9;
+    color: var(--secondary-title-color);
 }
 
 h2 {
@@ -36,7 +60,7 @@ h5 {
     font-variant: small-caps;
 }
 pre, code {
-    background-color: #FCFDFF;
+    background-color: var(--secondary-background-color);
 }
 pre>code {
     font-size: 13px;
@@ -44,17 +68,19 @@ pre>code {
 pre {
     margin-top: 25px;
     margin-bottom: 25px;
+    color: var(--code-color);
+    border-color: var(--menu-border-color);
 }
 .lead {
     font-family:"Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     line-height: 1.4;
     letter-spacing: 0.0312em;
-    color: #B1B7B9;
+    color: var(--secondary-title-color);
 }
 .navbar-default {
-    background-color: #343838;
-    border-bottom: 8px #EBF2F2 solid;
+    background-color: var(--header-background-color);
+    border-bottom: 8px var(--header-border-color) solid;
 }
 .bs-sidenav {
     background-image: url("../img/grid11.png");
@@ -62,14 +88,18 @@ pre {
     font-family: Inter,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 13px;
 }
+@media (prefers-color-scheme: dark) {
+    .bs-sidenav {background-image: none;}
+}
 .well {
-    background-color: #FCFDFF;
+    background-color: var(--secondary-background-color);
+    border-color: var(--menu-border-color);
 }
 .btn-default {
-    background-color:#FCFDFF;
+    background-color: var(--secondary-background-color);
 }
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-    background-color: #FCFDFF;
+    background-color: var(--secondary-background-color);
 }
 #mkdocs-search-query:focus {
     outline: none;
@@ -80,9 +110,27 @@ pre {
     font-family:"Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #343838;
+    color: var(--main-text-color);
     height: 45px;
 }
 footer > hr {
     width: 35%;
+}
+.modal-content {
+    background-color: var(--secondary-background-color);
+}
+.modal-header,
+.modal-body,
+.modal-footer {
+    border-color: var(--menu-border-color);
+}
+.form-control {
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    border-color: var(--menu-border-color);
+}
+.bs-callout {
+    background-color: var(--secondary-background-color);
+    color: var(--secondary-text-color);
+    border-color: var(--menu-border-color);
 }
