@@ -13,7 +13,9 @@ theme:
 
 nav:
   - Home: index.md
-  - Specimen: specimen.md
+  # - Specimen: specimen.md
+  - Arquitectura WordPress: arquitectura-wordpress.md
+  - PrestaShop en Docker: prestashop-en-docker.md
 
 markdown_extensions:
   - admonition
