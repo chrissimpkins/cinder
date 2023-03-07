@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A clean, responsive theme for static documentation websites that are generated with MkDocs">
+    <meta name="author" content="Christopher Simpkins">
+    <link rel="canonical" href="https://sourcefoundry.org/cinder/prestashop-en-docker/">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    
+    <title>PrestaShop en Docker - Cinder</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="..">Cinder</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../arquitectura-wordpress/">Arquitectura WordPress</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">PrestaShop en Docker</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../arquitectura-wordpress/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="next" >
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/chrissimpkins/cinder/edit/master/docs/prestashop-en-docker.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#prestashop-en-docker">PrestaShop en Docker</a></li>
+            <li class="second-level"><a href="#docker">docker</a></li>
+                
+                <li class="third-level"><a href="#env">.env</a></li>
+                <li class="third-level"><a href="#docker-composeyaml">docker-compose.yaml</a></li>
+            <li class="second-level"><a href="#proceso-de-trabajo">Proceso de trabajo</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="prestashop-en-docker">PrestaShop en Docker<a class="headerlink" href="#prestashop-en-docker" title="Permanent link">&para;</a></h1>
+<p>En esta práctica realizaremos la misma operación que en la práctica anterior, salvo por el contenedor que tenemos que usar, en vez de usar WordPress, usaremos PrestaShop y adición de más variables. <strong>Puesto que de PrestaShop no hay una imagen oficial, usaremos bitnami/prestashop</strong>. También <strong><em>asignaremos a la instancia al menos 8GB de memoria RAM</em></strong> para que PrestaShop se cree en poco tiempo.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Puede que las imágenes no se vean</p>
+</div>
+<p>Crearemos un repositorio y lo clonaremos en nuestra máquina local, apenas hay cambios con respecto a la práctica anterior, por lo que usaremos casi todo el código de la anterior práctica para aprovechar el tiempo y realizar únicamente la parte del contenedor de PrestaShop.</p>
+<p>La estructura del repositorio es la siguiente:</p>
+<ul>
+  <li>ansible</li>
+    <ul>
+      <li>inventario</li>
+        <ul>
+          <li>inventario --> Archivo</li>
+        </ul>
+      <li>playbooks</li>
+        <ul>
+          <li>delete_compose.yaml</li>
+          <li>deploy_compose.yaml</li>
+          <li>install_docker.yaml</li>
+        </ul>
+      <li>vars</li>
+        <ul>
+          <li>variables.yaml</li>
+        </ul>
+      <li>main.yaml</li>
+    </ul>
+  <li>docker</li>
+    <ul>
+      <li>.env</li>
+      <li>docker-compose.yaml</li>
+    </ul>
+  <li>terraform</li>
+    <ul>
+      <li>main.tf</li>
+      <li>variables.tf</li>
+    </ul>
+</ul>
+
+<h2 id="docker">docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
+<p>En esta parte tendremos lo mismo que en la anterior práctica, salvo por el cambio de WordPress a PrestaShop en el archivo de <em>docker-compose.yaml</em> y la agregación de variables al archivo <em>.env</em>, por lo que explicaré las adiciones en ambos archivos.</p>
+<h3 id="env">.env<a class="headerlink" href="#env" title="Permanent link">&para;</a></h3>
+<p>Antes de entrar con el archivo <em>docker-compose.yaml</em>, asignaremos las variables que hay que usar para PrestaShop.</p>
+<p>La primera variable, <em>USER_FIRST_NAME</em>, nos permitirá establecer el nombre del propietario de la tienda de PrestaShop, con la segunda variable, <em>USER_LAST_NAME</em>, servirá para establecer los apellidos o el segundo nombre del propietario. Con la variable <em>PRESTASHOP_ACCESS_EMAIL</em> establecemos el correo electrónico que se usará en PrestaShop para el acceso al Back-Office, con la variable <em>PRESTASHOP_ACCESS_PASSWORD</em> estableceremos la contraseña de acceso al Back-Office.</p>
+<p>La siguiente variable, <em>PRESTASHOP_DOMAIN</em>, nos servirá para indicar el nombre de dominio que tiene la tienda online, con <em>PRESTASHOP_COUNTRY</em> establecemos el país de la tienda y con <em>PRESTASHOP_LANGUAGE</em> establecemos el idioma para PrestaShop.</p>
+<pre><code class="language-bash">USER_FIRST_NAME=&quot;Juan Ramón&quot;
+USER_LAST_NAME=&quot;Rueda Lao&quot;
+PRESTASHOP_ACCESS_EMAIL=ujgu.ltwjr72@pihey.com
+PRESTASHOP_ACCESS_PASSWORD=Admin123@45
+PRESTASHOP_DOMAIN=jrrlprestashop14.ddns.net
+PRESTASHOP_COUNTRY_LANGUAGE=es
+</code></pre>
+<h3 id="docker-composeyaml">docker-compose.yaml<a class="headerlink" href="#docker-composeyaml" title="Permanent link">&para;</a></h3>
+<p>Comenzaremos directamente con el contenedor de PrestaShop, usaremos la imagen <em>bitnami/prestashop:8.0.1</em>, esta es la última versión, por lo que por buenas prácticas, no usaremos latest o dejaremos en blanco la versión ya que al subirse otra versión nueva de la imagen, nos puede dar fallos al implementarla. Esta imagen realiza la instalación de PrestaShop por defecto, por lo que usaremos las variables de entorno que necesitemos y queramos para personalizar el sitio web.</p>
+<p>Con la variable de entorno <em>PRESTASHOP_FIRST_NAME</em> asignamos el nombre del propietario que hemos declarado en el archivo de variables, con la segunda variable, <em>PRESTASHOP_LAST_NAME</em> estableceremos la variable para los apellidos o el segundo nombre del usuario, con la tercera variable, <em>PRESTASHOP_EMAIL</em> asignaremos el email que se usará para el acceso al Back-Office y con <em>PRESTASHOP_PASSWORD</em> estableceremos la contraseña de acceso al Back-Office.</p>
+<p>En la variable <em>PRESTASHOP_HOST</em>, pondremos la variable para el dominio de la tienda online, en la variable <em>PRESTASHOP_ENABLE_HTTPS=yes</em> estableceremos que la tienda use TLS / SSL para agregar seguridad. En <em>PRESTASHOP_COUNTRY</em> asignaremos la variable para establecer el país y en <em>PRESTASHOP_LANGUAGE</em> usaremos la variable para indicar el idioma de la tienda.</p>
+<p>Para ir finalizando con las variables de entorno de PrestaShop, usaremos la variable <em>PRESTASHOP_DATABASE_HOST</em> para indicar el contenedor que tiene la base de datos, con la variable <em>PRESTASHOP_DATABASE_NAME</em> indicaremos la base de datos que se usará para crear las tablas y los registros, con <em>PRESTASHOP_DATABASE_USER</em> estableceremos el usuario de la base de datos y con <em>PRESTASHOP_DATABASE_PASSWORD</em> la contraseña del usuario de la base de datos.</p>
+<p>A continuación, si no queremos evitar perder datos, hay que usar un volumen gestionado por Docker, en este caso la variable del volumen es <strong>prestashop_data</strong> y la tenemos que vincular al directorio <strong>/bitnami/prestashop</strong>, después, el contenedor esperará a que el contenedor mysql esté saludable para poder ejecutarse y con un <em>restart always</em> para que se reinicie en cuanto tenga algún fallo y por último, el contenedor estará conectado a las networks <em>frontend-network</em> y <em>backend-network</em> para poder servir su contenido y conectarse con el contenedor mysql.</p>
+<pre><code class="language-yaml">  prestashop:
+    image: bitnami/prestashop:8.0.1
+    # ports:
+    #   - 80:80
+    environment:
+      - PRESTASHOP_FIRST_NAME=${USER_FIRST_NAME}
+      - PRESTASHOP_LAST_NAME=${USER_LAST_NAME}
+      - PRESTASHOP_EMAIL=${PRESTASHOP_ACCESS_EMAIL}
+      - PRESTASHOP_PASSWORD=${PRESTASHOP_ACCESS_PASSWORD}
+      - PRESTASHOP_HOST=${PRESTASHOP_DOMAIN}
+      - PRESTASHOP_ENABLE_HTTPS=yes
+      - PRESTASHOP_COUNTRY=${PRESTASHOP_COUNTRY_LANGUAGE}
+      - PRESTASHOP_LANGUAGE=${PRESTASHOP_COUNTRY_LANGUAGE}
+      - PRESTASHOP_DATABASE_HOST=mysql
+      - PRESTASHOP_DATABASE_NAME=${MYSQL_DATABASE}
+      - PRESTASHOP_DATABASE_USER=${MYSQL_USER}
+      - PRESTASHOP_DATABASE_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - prestashop_data:/bitnami/prestashop
+    depends_on:
+      mysql:
+        condition: service_healthy
+    restart: always
+    networks:
+      - frontend-network
+      - backend-network
+</code></pre>
+<p>Por defecto, esta imagen de PrestaShop usa el puerto 8080 de Apache, por lo que para conectar con el contenedor prestashop, hay que indicar el contenedor con el puerto 8080. También <strong><em>modificaremos el dominio de DOMAINS para que adecuarlo a la práctica</em></strong>.</p>
+<pre><code class="language-yaml">  https-portal:
+    image: steveltn/https-portal
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ssl_certs_data:/var/lib/https-portal
+    environment:
+      # DOMAINS: 'localhost -&gt; http://prestashop:8080'
+      # STAGE: 'local'
+      DOMAINS: 'jrrlprestashop14.ddns.net -&gt; http://prestashop:8080'
+      STAGE: 'production'
+    restart: always
+    networks: 
+      - frontend-network
+</code></pre>
+<h2 id="proceso-de-trabajo">Proceso de trabajo<a class="headerlink" href="#proceso-de-trabajo" title="Permanent link">&para;</a></h2>
+<p>Como hicimos con la práctica anterior, ejecutaremos primero Terraform para montar la infraestructura en AWS y la IP elástica que nos devuelva, la pondremos en el archivo inventario de Ansible. Después ejecutaremos el archivo main.yaml con las dos primeras variables para instalar Docker, Docker Compose y pasar los archivos que hemos creado de Docker Compose, además de ejecutar la infraestructura con el segundo playbook.</p>
+<pre><code class="language-bash">ansible-playbook -i inventario/inventario main.yaml --extra-vars &quot;instalar=docker desplegar=compose&quot;
+</code></pre>
+<p>Usaremos la IP elástica de la instancia de AWS para asignar el dominio a la IP elástica en <a href="https://www.noip.com/es-MX/">No-IP</a>.</p>
+<p><img alt="Dominio e IP en No-IP" src="../img/blog/prestashop-en-docker/no-ip.png" /></p>
+<p>Cuando Ansible termine de ejecutar todos los playbooks que queríamos ejecutar, esperaremos un par de minutos a que la infraestructura de contenedores esté completamente lista y accederemos al dominio que hemos preparado. Si todo ha ido bien, tendrá que salir la tienda online montada.</p>
+<p><img alt="Tienda Online de PrestaShop" src="../img/blog/prestashop-en-docker/prestashop_installed.png" /></p>
+<p>Lo siguiente que haremos será acceder al Back-Office de nuestra tienda online, para ello, <strong><em>no podemos usar dominio/admin</em></strong> ya que no está disponible dicho directorio por tanto tenemos que acceder al volumen de Docker que hay en la instancia para saber con certeza el acceso al Back-Office. Nos conectaremos por SSH a la instancia y usaremos los comandos:</p>
+<pre><code class="language-bash">sudo -s
+
+cd /var/lib/docker/volumes/docker_prestashop_data/_data
+
+ls
+</code></pre>
+<p>Vemos que no hay un directorio <em>admin</em>, pero sí que hay un directorio <em>administration</em> que será el que probaremos junto al dominio.</p>
+<p><img alt="Acceso al volumen de Docker de PrestaShop" src="../img/blog/prestashop-en-docker/docker_volume_prestashop_directory.png" /></p>
+<p>Vemos que hemos podido acceder al login del Back-Office, lo siguiente es poner el email y la contraseña que hemos asignado en el archivo <em>docker-compose.yaml</em>.</p>
+<p><img alt="Acceso al Back-Office de PrestaShop" src="../img/blog/prestashop-en-docker/prestashop_administration.png" /></p>
+<p>Una vez hayamos accedido, iremos a <em>Parámetros de la tienda</em> ---&gt; <em>Configuración</em> para comprobar que tenemos realmente activado el TLS / SSL en la tienda.</p>
+<p><img alt="TLS / SSL de PrestaShop" src="../img/blog/prestashop-en-docker/prestashop_ssl.png" /></p>
+<p>A continuación, usaremos abriremos una nueva pestaña y probaremos a acceder a phpMyAdmin. Tenemos que poner :point_right: <em>dominio:8080</em>.</p>
+<p><img alt="Acceso a phpMyAdmin" src="../img/blog/prestashop-en-docker/phpmyadmin.png" /></p>
+<p>Después, accederemos a la base de datos que hemos designado para PrestaShop y veremos que hay bastantes tablas creadas.</p>
+<p><img alt="Base de datos de PrestaShop" src="../img/blog/prestashop-en-docker/prestashop_database.png" /></p>
+<p>Por último, comprobaremos los logs de los contenedores, en el terminal de la instancia, saldremos de los privilegios de <em>ROOT</em> mediante el comando <em>exit</em>. Después, en el directorio en el que están los archivo de Docker Compose, usaremos el comando:</p>
+<pre><code class="language-bash">docker compose logs -f
+</code></pre>
+<p>Con <em>logs</em>, comprobamos el funcionamiento de la infraestructura y sus <em>"procesos"</em>, con <em>-f</em> hacemos que se quede constantemente en primer plano, sin que muestre todos los logs que hay y luego finalice la ejecución del comando. Probaremos a refrescar la tienda online y veremos que se generan nuevo contenido.</p>
+<p><img alt="Docker Compose Logs" src="../img/blog/prestashop-en-docker/docker_compose_logs.png" /></p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a></small><br>
+            
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
