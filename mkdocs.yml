@@ -1,8 +1,8 @@
-site_name: Cinder
-site_url: https://sourcefoundry.org/cinder/
+site_name: Juan Ramón Rueda Lao
+site_url: https://juanramonrueda.github.io/mkdocs/
 site_author: Christopher Simpkins
 site_description: "A clean, responsive theme for static documentation websites that are generated with MkDocs"
-repo_url: "https://github.com/chrissimpkins/cinder"
+repo_url: "https://github.com/juanramonrueda/mkdocs"
 copyright: "Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a>"
 
 theme:
